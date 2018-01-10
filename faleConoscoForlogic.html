@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+            *{
+                box-sizing: border-box;
+                padding: 0;
+                margin:0;
+            }
+            body{
+                font-size: 100%;
+                
+            }
+            .header{grid-area: header;}
+            .image{grid-area: image;}
+            .main{grid-area: main;}
+            .footer{grid-area: footer;}
+            .sideright{grid-area:sideright;}
+            .container{
+                display: grid;
+                grid-template-areas: 'header header header header header header' 
+                'image image image image image image' 
+                'main main main main main sideright' 
+                'footer footer footer footer footer footer';
+                grid-gap: 0px;
+                
+            }
+         
+
+            /*begin header*/
+            .header{
+                display:inline-flex;
+                overflow: hidden;
+                padding:0;
+                margin:0;
+                background-color:#f9f9f9;
+            }
+            #logo-f img{
+                margin-top:22px;
+                margin-left: 95px;  
+                padding:0px;
+            }
+            #logo-f{
+                margin:0;
+                padding:0;
+               
+            }
+            .topnav{
+                font-size: 0.80rem;
+                font-family: 'Helvetica Neue Bold', Helvetica;
+                font-style: normal;
+                font-weight: bold;
+                text-transform: uppercase;
+                margin-top: 40px;   
+                letter-spacing: -0.5px;
+                margin-left: 260px;
+            }
+            .topnav a{
+                text-decoration: none;
+                color: gray;
+                padding: 0px 5px;
+             
+            }
+            #contratando{
+                margin-left: 5px;
+                padding:0;
+              
+            }
+            #contratando img{
+                margin:0;
+                padding:0;
+            }
+            /*end header*/
+
+            /*begin image*/
+               .image{
+                     background-image: url("imagem-top.png");
+                     background-repeat: no-repeat;
+                     background-size: cover;
+                     background-position: center center;
+                     padding-bottom: 150px;
+                     padding-top: 150px;
+                     height: 330px;
+                     color: white;          
+               }
+               .image h4{
+                    text-align: center;
+                    vertical-align: middle;
+                    letter-spacing: 2px;
+                    font-size: 1.8rem;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-style: normal;
+               }
+            /*end image*/
+            /*begin sideright*/
+               .sideright{background-color: #f9f9f9;}
+            /*end sideright*/
+            /*begin main*/
+            .main{background-color: #f9f9f9; }
+            fieldset{
+                padding:0;
+                border-color: black;
+                margin: 0 auto;
+                width: 80%;
+                
+            }
+            
+            .frm-m{
+               display:inline;
+               width:100%;
+            }
+            .frm-m  > div{display: inline-block;} 
+            h1{ 
+                margin: 70px 0px 20px 90px;
+                color:#14c5fe;
+                font-size: 50px;
+                font-weight: 500;
+                font-family: "Helvetica Neue Light";
+                font-style: normal;
+                letter-spacing: 0px;
+                line-height: 35px;
+                padding-top: 0px;
+                padding-bottom: 0px;
+                padding-left: 50px;
+                padding-right: 50px;
+                text-align: left;
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
+                border-bottom-left-radius: 0px;
+                border-bottom-right-radius: 0px;    
+            }
+            .grp-fm-left{
+                width: 40%;
+            }
+            
+            .grp-fm-right{width: 40%}
+            .grp-fm-bottom{width: 82%;}
+            .inp-f, .sel-f{
+                padding: 6px 12px;
+                width: 100%;
+                margin: 5px 0;
+                border: 1px solid #ccc;
+                color: #555;
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.075); 
+                background-color: #fff;
+                transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            }
+            label{display:inline-block; color: gray;}
+            .lb-lef {text-align: left;}
+            [class*="grp-fm-"]{
+                margin:7px;
+            }
+            #message{
+                padding: 6px 12px;
+                height: 100px;
+                -webkit-appearance: textarea;
+                background-color: white;
+                -webkit-rtl-ordering: logical;
+                flex-direction: column;
+                box-sizing: border-box;
+                resize: vertical;
+                
+            }
+            #btn-e{
+                background-color: #07b5dd;
+                font-size: 1.56rem;
+                padding: 15px 50px;
+                border: 1px solid #ccc;
+                margin-left: 10px;
+                color: white;
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.075); 
+                transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            }
+            #btn-e:hover{
+                background-color: #2484b2;
+            }
+            /*end main*/
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="" id="logo-f">
+                <img src="img/cropped-logo_GrupoForLogic.png" alt="logoForlogic">
+            </a>
+            <nav class="topnav">
+                <a href="">início</a>
+                <a href="">áreas de negocio</a>
+                <a href="">quem somos</a>
+                <a href="">clientes</a>
+                <a href="">novidades</a>
+                <a href="">fale conosco</a>
+                <a href="">ouvidoria</a>
+            </nav>
+            
+            <a href="#" id="contratando">
+                <img src="img/estamos-contratando.png" alt="contratando">
+            </a>
+            
+           
+        </div>
+       
+        <div class="image">
+            <h4>Entre em contato conosco, estamos à sua disposição</h4>
+        </div>
+        <div class="sideright"></div>
+        <div class="main">
+                <h1>Fale com a gente</h1>
+            <fieldset>
+               
+                    <form action="" class="frm-m">
+                            <div class="grp-fm-left">
+                                <div class="grp-n">
+                                    <div class="lb-lef"><label for="full-name">Nome</label></div>
+                                    <input type="text" name="fullname" id="full-name" class="inp-f">
+                                </div>
+                              
+                                <div class="grp-c">
+                                    <div class="lb-lef"><label for="n-comp">Empresa</label></div>
+                                    <input type="text" name="company" id="n-comp" class="inp-f">
+                                </div>
+                                
+                               <div class="grp-s">
+                                    <div class="lb-lef"><label for="n-state">Estado</label></div>
+                                    <select name="state" id="n-state" class="sel-f">
+                                        <option value="1">Qualquer coisa</option>
+                                        <option value="2">Qualquer coisa</option>
+                                        <option value="3">Qualquer coisa</option>
+                                        <option value="4">Qualquer coisa</option>
+                                        <option value="5">Qualquer coisa</option>
+                                    </select>
+                               </div>
+                                
+                            </div>
+                            <div class="grp-fm-right">
+                                <div class="grp-e">
+                                        <div class="lb-lef"> <label for="e-mail">Nome</label></div>
+                                    <input type="text" name="email" id="e-mail" class="inp-f">
+                                </div>
+                                
+                                <div class="grp-p">
+                                        <div class="lb-lef"> <label for="n-phone">Empresa</label></div>
+                                    <input type="text" name="phone" id="n-phone" class="inp-f">
+                                </div>
+                                
+                                <div class="grp-c">
+                                    <div class="lb-lef"><label for="n-city">Estado</label></div>
+                                    <select name="state" id="n-city" class="sel-f">
+                                        <option value="1">Qualquer coisa</option>
+                                        <option value="2">Qualquer coisa</option>
+                                        <option value="3">Qualquer coisa</option>
+                                        <option value="4">Qualquer coisa</option>
+                                        <option value="5">Qualquer coisa</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="grp-fm-bottom">
+                                <div class="grp-a">
+                                    <div class="lb-lef"><label for="matter">Assunto</label></div>
+                                    <input type="text" name="matter" id="matter" class="inp-f">
+                                </div>
+                                <div class="grp-d">
+                                    <div class="lb-lef"><label for="message">Deixe sua mensagem  para nós</label></div>
+                                    <textarea name="message" id="message" class="inp-f"></textarea>
+                                </div>
+                                <div class="grp-nm">
+                                    <div class="lb-lef"><label for="matter">Digite dois números quaisquer</label></div>
+                                    <input type="text" name="matter" id="matter" class="inp-f" placeholder="Exemplo: 22">
+                                </div>
+                            </div>
+                            <div class="btn">
+                                <button id="btn-e">Enviar</button>
+                            </div>
+                   </form>
+            </fieldset>
+            
+        </div>
+        <div class="footer"></div>
+    </div>
+    
+</body>
+</html>
