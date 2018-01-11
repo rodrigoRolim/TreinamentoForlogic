@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Document</title>
     <style type="text/css">
             *{
@@ -13,18 +14,18 @@
             }
             body{
                 font-size: 100%;
-                
+             
             }
             .header{grid-area: header;}
             .image{grid-area: image;}
             .main{grid-area: main;}
             .footer{grid-area: footer;}
-            .sideright{grid-area:sideright;}
+            .r-right{grid-area:r-right;}
             .container{
                 display: grid;
                 grid-template-areas: 'header header header header header header' 
                 'image image image image image image' 
-                'main main main main main sideright' 
+                'main main main main main r-right' 
                 'footer footer footer footer footer footer';
                 grid-gap: 0px;
                 
@@ -33,15 +34,22 @@
 
             /*begin header*/
             .header{
+                position: fixed;
+                width: 100%;
                 display:inline-flex;
                 overflow: hidden;
                 padding:0;
                 margin:0;
-                background-color:#f9f9f9;
+                background-color:#f8f8f8;
+                border: 1px solid #e7e7e7;
+                border-top: 0;
+                border-right: 0;
+                border-left:0;
+                height: 92px;
             }
             #logo-f img{
-                margin-top:22px;
-                margin-left: 95px;  
+                margin-top:23px;
+                margin-left: 97px;  
                 padding:0px;
             }
             #logo-f{
@@ -62,8 +70,11 @@
             .topnav a{
                 text-decoration: none;
                 color: gray;
-                padding: 0px 5px;
+                padding: 35px 5px;
              
+            }
+            .topnav a:hover{
+                text-decoration: underline;
             }
             #contratando{
                 margin-left: 5px;
@@ -84,7 +95,8 @@
                      background-position: center center;
                      padding-bottom: 150px;
                      padding-top: 150px;
-                     height: 330px;
+                     height: 334px;
+                     margin-top: 89px;
                      color: white;          
                }
                .image h4{
@@ -96,64 +108,161 @@
                     font-style: normal;
                }
             /*end image*/
-            /*begin sideright*/
-               .sideright{background-color: #f9f9f9;}
-            /*end sideright*/
-            /*begin main*/
-            .main{background-color: #f9f9f9; }
-            fieldset{
-                padding:0;
-                border-color: black;
-                margin: 0 auto;
-                width: 80%;
-                
+            /*right*/
+            .r-right{
+                background-color:  #f9f9f9;
+                padding:0px 40px;
             }
+            .join-us{
+                font-family: Helvetica Neue Thin;
+                font-size: 2.0rem; 
+                color: #666;
+                width: 100%;
+                border-color: transparent;
+                height: 300px;
+                margin-top:100px;
+                float: right;
+                line-height: 1.0;
+            }
+            .box-work-us{
+                border: 2px solid #d6d6d6;
+                width: 95%;
+                overflow: hidden;
+                text-align: center;
+                height: 180px;
+                margin-top: 10px;
+            }
+            .box-work-us h3 {
+                font-size: 1.9rem;
+                white-space: -1px;
+                font-family: Helvetica Neue Thin;
+                color: #d6d6d6;
+                float: right;
+                text-transform: uppercase;
+                font-weight: 100;
+                line-height: 1.0;
+                text-align: center;
+                margin-top:20px;
+                margin-right: 10px;
+                margin-bottom: 0px;
+            }
+            .btn-c{
+                background-color: #fdc00f;
+                color:white;
+                font-size: 1.4rem;
+                text-decoration: none;
+                width:90%;
+                padding: 15px 20px;
+                font-style: normal;
+	            font-variant: normal;
+	            font-weight: 100;
+            }
+            .btn-c:hover{
+                background-color: #fff;
+                color: #fdc00f;
+                border: 1px solid #fdc00f;
+            }
+            .card{
+                margin-right: 10px;
+                margin-left: 0px;
+                margin-top: 12px;
+                margin-bottom: 15px;
+            }
+            .icons-sociable{
+                margin-top: 60px;
+                background-color: transparent;
+            }
+            .fb{
+                background-image: url("ico-Facebook.png");
+            }
+            .tw{
+                background-image: url("ico-Twitter.png");
+            }
+            .lk{
+                background-image: url("ico-Linkedin.png");
+            }
+            .go{
+                background-image: url("ico-g.png");
+            }
+            .icons-sociable{
+                padding-bottom:70px;
+               
+            }
+            .icons-sociable a{
+                color: #337ab7;
+            }
+            .fb:hover{background-image: url("ico-Facebook_hover.png");}
+            .tw:hover{background-image: url("ico-Twitter_hover.png");}
+            .lk:hover{background-image: url("ico-Linkedin_hover.png");}
+            .go:hover{background-image: url("ico-g_hover.png");}
+            .sets{
+                width: 50px;
+                height: 50px;
+                float: left;
+                background-repeat: no-repeat;
+                margin-top: -40px;
+                cursor: pointer;
+            }
+            .j-1{
+                margin-top:5px;
+            }
+            /*right*/
+          
+            /*begin main*/
+            .main{background-color: #f9f9f9; width: 100%; display: flex;}
             
+            .field-form{
+                padding:0;
+                margin: 0 auto;
+                width: 100%;
+                border-color: transparent;
+                padding-left: 100px;
+                text-align: center;
+            }
+         
             .frm-m{
                display:inline;
-               width:100%;
             }
             .frm-m  > div{display: inline-block;} 
-            h1{ 
-                margin: 70px 0px 20px 90px;
+            .field-form h1{ 
+                margin: 70px 0px 20px 30px;
                 color:#14c5fe;
-                font-size: 50px;
+                font-size: 3.125rem;
                 font-weight: 500;
                 font-family: "Helvetica Neue Light";
                 font-style: normal;
                 letter-spacing: 0px;
                 line-height: 35px;
-                padding-top: 0px;
-                padding-bottom: 0px;
-                padding-left: 50px;
+                padding-top: 5px;
+                padding-bottom: 6px;
                 padding-right: 50px;
                 text-align: left;
                 border-top-left-radius: 0px;
                 border-top-right-radius: 0px;
                 border-bottom-left-radius: 0px;
-                border-bottom-right-radius: 0px;    
+                border-bottom-right-radius: 0px;  
+
             }
             .grp-fm-left{
-                width: 40%;
+                width: 46%;
+                margin-right:15px;
             }
             
-            .grp-fm-right{width: 40%}
-            .grp-fm-bottom{width: 82%;}
+            .grp-fm-right{width: 46%;}
+            .grp-fm-bottom{width: 94.5%;}
             .inp-f, .sel-f{
-                padding: 6px 12px;
+                padding: 8.5px 11px;
                 width: 100%;
-                margin: 5px 0;
+                margin: 3px 0px 10px 0;
                 border: 1px solid #ccc;
                 color: #555;
                 box-shadow: inset 0 1px 1px rgba(0,0,0,.075); 
                 background-color: #fff;
-                transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+                transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
             }
-            label{display:inline-block; color: gray;}
+            label{display:inline-block; color: #999; font-weight: 700; margin-bottom: 5px;}
             .lb-lef {text-align: left;}
-            [class*="grp-fm-"]{
-                margin:7px;
-            }
+           
             #message{
                 padding: 6px 12px;
                 height: 100px;
@@ -170,15 +279,81 @@
                 font-size: 1.56rem;
                 padding: 15px 50px;
                 border: 1px solid #ccc;
-                margin-left: 10px;
+                margin-left: 30px;
+                margin-top: 10px;
                 color: white;
                 box-shadow: inset 0 1px 1px rgba(0,0,0,.075); 
                 transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+                margin-bottom: 80px;
             }
             #btn-e:hover{
                 background-color: #2484b2;
             }
+           
             /*end main*/
+            /*begin footer*/
+            .above{
+                background-color: #1a1a1a;               
+                width:100%;
+                display:flex;
+            }
+          
+            .bellow{
+                background-color: #000000;
+                text-align: center;
+                color:#f9f9f9;
+                font-size: 0.85rem;
+                padding: 0px;
+                line-height: 22px;
+                letter-spacing: 0px;
+                
+            }
+            .bellow p{
+
+                padding-top:10px;
+            }
+            .logo-footer img{
+                width: 37%;
+                background-position: top left;
+                
+            }
+            .adress-comp{
+                color:#888888;
+                font-family: "Open Sans";
+                font-weight: 500;
+                font-size: 1.0rem;
+                line-height: 23px;
+                letter-spacing: 0px;
+                background-position: top left;
+                width: 100%;
+                padding: 40px 0 35px 80px;
+                margin-bottom: 10px; 
+               
+            }
+            p{
+                padding: 0 0 19px;
+            }
+            .gallery-ins{
+                color:#888888;
+                font-size: 1.2rem;
+                width:100%;
+                margin-top:40px;
+                text-align: left; 
+                margin-right:60px;
+            }
+            .gallery-ins p{
+                margin-bottom: 10px;
+            }
+            .gallery a img{
+                padding:5px;
+                float:left;
+
+            }
+            .gallery{
+                padding-right: 0px;
+                width:100%;
+            }
+            /*end footer*/
     </style>
 </head>
 <body>
@@ -207,25 +382,46 @@
         <div class="image">
             <h4>Entre em contato conosco, estamos à sua disposição</h4>
         </div>
-        <div class="sideright"></div>
+       <div class="r-right">
+           
+            <div class="join-us">
+                    <div><h4>Junte-se a nós</h4></div>
+                    <div class="icons-sociable">
+                        <a href="" class="fb sets"></a>
+                        <a href="" class="tw sets"></a>
+                        <a href="" class="lk sets"></a>
+                        <a href="" class="go sets"></a>
+                    </div>
+                    
+                    <div class="box-work-us">
+                        <div class="j-1">
+                            <h3 id="wu-1">trabalhe<br/>conosco</h3>
+                            <img src="cartao.png" alt="carstao" class="card">
+                        </div>
+                        <div class="curriculo">
+                            <a href="" class="btn-c">cadastre o seu curriculo</a>
+                        </div>
+                    </div>
+                </div>
+       </div>
         <div class="main">
-                <h1>Fale com a gente</h1>
-            <fieldset>
-               
+                
+            <fieldset class="field-form">
+                    <h1>Fale com a gente</h1>
                     <form action="" class="frm-m">
                             <div class="grp-fm-left">
                                 <div class="grp-n">
-                                    <div class="lb-lef"><label for="full-name">Nome</label></div>
+                                    <div class="lb-lef"><label for="full-name">Nome *</label></div>
                                     <input type="text" name="fullname" id="full-name" class="inp-f">
                                 </div>
                               
                                 <div class="grp-c">
-                                    <div class="lb-lef"><label for="n-comp">Empresa</label></div>
+                                    <div class="lb-lef"><label for="n-comp">Empresa *</label></div>
                                     <input type="text" name="company" id="n-comp" class="inp-f">
                                 </div>
                                 
                                <div class="grp-s">
-                                    <div class="lb-lef"><label for="n-state">Estado</label></div>
+                                    <div class="lb-lef"><label for="n-state">Estado *</label></div>
                                     <select name="state" id="n-state" class="sel-f">
                                         <option value="1">Qualquer coisa</option>
                                         <option value="2">Qualquer coisa</option>
@@ -238,17 +434,17 @@
                             </div>
                             <div class="grp-fm-right">
                                 <div class="grp-e">
-                                        <div class="lb-lef"> <label for="e-mail">Nome</label></div>
+                                        <div class="lb-lef"> <label for="e-mail">Email *</label></div>
                                     <input type="text" name="email" id="e-mail" class="inp-f">
                                 </div>
                                 
                                 <div class="grp-p">
-                                        <div class="lb-lef"> <label for="n-phone">Empresa</label></div>
+                                        <div class="lb-lef"> <label for="n-phone">Telefone *</label></div>
                                     <input type="text" name="phone" id="n-phone" class="inp-f">
                                 </div>
                                 
                                 <div class="grp-c">
-                                    <div class="lb-lef"><label for="n-city">Estado</label></div>
+                                    <div class="lb-lef"><label for="n-city">Cidade *</label></div>
                                     <select name="state" id="n-city" class="sel-f">
                                         <option value="1">Qualquer coisa</option>
                                         <option value="2">Qualquer coisa</option>
@@ -272,14 +468,42 @@
                                     <input type="text" name="matter" id="matter" class="inp-f" placeholder="Exemplo: 22">
                                 </div>
                             </div>
-                            <div class="btn">
+                            <div class="btn" style="display:block; text-align:left;">
                                 <button id="btn-e">Enviar</button>
                             </div>
                    </form>
+                   
             </fieldset>
-            
+
+           
         </div>
-        <div class="footer"></div>
+        <div class="footer">
+                <div class="above">
+                   
+                    <div class="adress-comp">
+                            <div class="logo-footer">
+                                    <p><img src="LogoGrupo_Oficial-cinza.png" alt=""></p>
+                            </div>
+                        <p>Rua Antônio Registro, 181 - Vila Seugling<br/>
+                           Cornélio Procópio - Paraná<br/>
+                           CEP 86.300-000
+                        </p>
+                        <p>Telefone: 43 3133-2200<br/>
+                           E-mail: contato@forlogic.net
+                        </p>
+                    </div>
+                    <div class="gallery-ins">
+                        <div><p>Instagram</p></div>
+                        <div class="gallery">
+                            <a href="" class="foto_1"><img src="foto_1.jpg" alt="" width="150" height="150"></a>
+                            <a href="" class="foto_2"><img src="foto_2.jpg" alt="" width="150" height="150"></a>
+                            <a href="" class="foto_3"><img src="foto_3.jpg" alt="" width="150" height="150"></a>
+                            <a href="" class="foto_4"><img src="foto_4.jpg" alt="" width="150" height="150"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bellow"><p>© Grupo Forlogic Software 2017</p></div>
+        </div>
     </div>
     
 </body>
