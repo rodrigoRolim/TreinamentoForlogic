@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style rel="stylesheet" type="text/css">
+      
+    </style>
+</head>
+<body>
+    <input type="text" id="phone" name="phone">
+   
+    <script type="text/javascript">
+        var phone = document.getElementById("phone");
+        phone.addEventListener("keyup", formattedNumberPhone);
+     
+        function formattedNumberPhone(event){
+            var input = event.target.value;
+
+            if(/[\d]/.test(input) && event.which != "8"){
+               phone.value = input.replace(/[a-z]/gi, "");
+               console.log(input);
+               if(input.length < 3){
+               phone.value = "(" + input;}
+               if(input.length === 3){
+                   phone.value = input + ")";
+               }
+               
+            } else if(/[a-z]/.test(input)){
+                phone.value = "";
+            }
+        }
+        function isNumber(number){
+            return !isNaN(number);
+        }
+        function isChar(){
+
+        }
+    </script>
+</body>
+</html>
