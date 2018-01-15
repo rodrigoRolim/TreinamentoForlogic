@@ -14,7 +14,7 @@
             }
             body{
                 font-size: 100%;
-             
+                font-family: Arial, Helvetica, sans-serif;
             }
             .header{grid-area: header;}
             .image{grid-area: image;}
@@ -115,7 +115,6 @@
 
             }
             .join-us{
-                font-family: Helvetica Neue Thin;
                 font-size: 2.0rem; 
                 color: #666;
                 width: 100%;
@@ -136,12 +135,12 @@
             .box-work-us h3 {
                 font-size: 1.9rem;
                 white-space: -1px;
-                font-family: Helvetica Neue Thin;
+                letter-spacing: -1px;
                 color: #d6d6d6;
                 float: right;
                 text-transform: uppercase;
                 font-weight: 100;
-                line-height: 1.0;
+                line-height: 1.1;
                 text-align: center;
                 margin-top:20px;
                 margin-right: 10px;
@@ -153,7 +152,7 @@
                 font-size: 1.4rem;
                 text-decoration: none;
                 width:90%;
-                padding: 15px 23px;
+                padding: 15px 10px;
                 font-style: normal;
 	            font-variant: normal;
 	            font-weight: 100;
@@ -230,11 +229,10 @@
                 margin: 70px 0px 20px 30px;
                 color:#14c5fe;
                 font-size: 3.125rem;
-                font-weight: 500;
-                font-family: "Helvetica Neue Light";
+                font-weight: 100;
                 font-style: normal;
                 letter-spacing: 0px;
-                line-height: 35px;
+                line-height: 30px;
                 padding-top: 5px;
                 padding-bottom: 6px;
                 padding-right: 50px;
@@ -328,7 +326,7 @@
                 line-height: 23px;
                 letter-spacing: 0px;
                 background-position: top left;
-                width: 100%;
+                width: 40%;
                 padding: 40px 0 35px 80px;
                 margin-bottom: 10px; 
                
@@ -340,10 +338,10 @@
             .gallery-ins{
                 color:#888888;
                 font-size: 1.2rem;
-                width:100%;
+                width:60%;
                 margin-top:45px;
                 text-align: left; 
-                margin-right:60px;
+               
             }
             .gallery-ins p{
                 margin-bottom: 20px;
@@ -351,7 +349,7 @@
             .gallery a img{
                 padding-left:5px;
                 float:left;
-
+                margin-right: 10px;
             }
             .gallery{
                 
@@ -412,20 +410,20 @@
                 
             <fieldset class="field-form">
                     <h1>Fale com a gente</h1>
-                    <form action="" class="frm-m">
+                    <form action="" class="frm-m" method="get">
                             <div class="grp-fm-left">
                                 <div class="grp-n">
                                     <div class="lb-lef"><label for="full-name">Nome *</label></div>
-                                    <input type="text" name="fullname" id="full-name" class="inp-f">
+                                    <input type="text" name="fullname" id="full-name" class="inp-f" required>
                                 </div>
                               
                                 <div class="grp-c">
                                     <div class="lb-lef"><label for="n-comp">Empresa *</label></div>
-                                    <input type="text" name="company" id="n-comp" class="inp-f">
+                                    <input type="text" name="company" id="n-comp" class="inp-f" required>
                                 </div>
                                 
                                <div class="grp-s">
-                                    <div class="lb-lef"><label for="n-state">Estado *</label></div>
+                                    <div class="lb-lef"><label for="n-state">Estado</label></div>
                                     <select name="state" id="n-state" class="sel-f">
                                         <option value="1">Qualquer coisa</option>
                                         <option value="2">Qualquer coisa</option>
@@ -439,16 +437,31 @@
                             <div class="grp-fm-right">
                                 <div class="grp-e">
                                         <div class="lb-lef"> <label for="e-mail">Email *</label></div>
-                                    <input type="text" name="email" id="e-mail" class="inp-f">
+                                    <input type="email" name="email" id="e-mail" class="inp-f" required>
                                 </div>
                                 
                                 <div class="grp-p">
-                                        <div class="lb-lef"> <label for="n-phone">Telefone *</label></div>
-                                    <input type="text" name="phone" id="n-phone" class="inp-f">
+                                        <div class="lb-lef"> <label for="n-phone">Telefone</label></div>
+                                    <input type="tel" name="phone" id="n-phone" class="inp-f" size="20">
                                 </div>
-                                
+                                <script type="text/javascript">
+                                    var phone = document.getElementById("n-phone");
+                                    phone.addEventListener("keyup", formattedNumberPhone);
+                                 
+                                    function formattedNumberPhone(event){
+                                        var number = "";
+                                        //alert(event.which);
+                                       if(!isNaN(event.target.value) && event.which != 8){
+                                            phone.value = number.concat("(", event.target.value);
+                                       } else if(event.target.value.length < 4 && event.which != 8 ){
+                                           phone.value = number.concat(event.target.value, ")");
+                                       } else {
+                                           phone.value = event.target.value.replace(/[^()^0-9^]*/gi, "");
+                                       }
+                                    }
+                                </script>
                                 <div class="grp-c">
-                                    <div class="lb-lef"><label for="n-city">Cidade *</label></div>
+                                    <div class="lb-lef"><label for="n-city">Cidade</label></div>
                                     <select name="state" id="n-city" class="sel-f">
                                         <option value="1">Qualquer coisa</option>
                                         <option value="2">Qualquer coisa</option>
@@ -468,7 +481,7 @@
                                     <textarea name="message" id="message" class="inp-f"></textarea>
                                 </div>
                                 <div class="grp-nm">
-                                    <div class="lb-lef"><label for="matter">Digite dois números quaisquer</label></div>
+                                    <div class="lb-lef"><label for="matter">Digite dois números quaisquer *</label></div>
                                     <input type="text" name="matter" id="matter" class="inp-f" placeholder="Exemplo: 22">
                                 </div>
                             </div>
@@ -499,10 +512,10 @@
                     <div class="gallery-ins">
                         <div><p>Instagram</p></div>
                         <div class="gallery">
-                            <a href="" class="foto_1"><img src="img/foto_1.jpg" alt="" ></a>
-                            <a href="" class="foto_2"><img src="img/foto_2.jpg" alt=""></a>
-                            <a href="" class="foto_3"><img src="img/foto_3.jpg" alt=""></a>
-                            <a href="" class="foto_4"><img src="img/foto_4.jpg" alt=""></a>
+                            <a href="" class="foto_1"><img src="img/foto_1.jpg" alt="foto instagram" ></a>
+                            <a href="" class="foto_2"><img src="img/foto_2.jpg" alt="foto instagram"></a>
+                            <a href="" class="foto_3"><img src="img/foto_3.jpg" alt="foto instagram"></a>
+                            <a href="" class="foto_4"><img src="img/foto_4.jpg" alt="foto instagram"></a>
                         </div>
                     </div>
                 </div>
