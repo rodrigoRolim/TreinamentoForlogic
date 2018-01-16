@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-  
+  <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="fonts/fonts.css" />
  
     <title>Document</title>
     <style>
@@ -18,47 +19,135 @@
             padding:0;
         }
         body{
-            font-family: Arial, Helvetica, sans-serif;
-            
-            
+            font-family: 'Proxima Nova', Georgia, sans-serif;
+            font-size: 100%;
         }
         .navbar{
             margin:0;
             padding:0;
         }
-        .collapse{
-            margin-left: 280px;
-        }
-        #contratando{
-            margin-right: 126px;
-        }
-        .navbar-right{float:right;}
-        #logo4 img{
-            margin-left: 90px;
-        }
+        .nav-link{
+            margin-top: 1px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            font-family: 'Helvetica Neue Bold',Helvetica;
+            color: #777;
+            font-style: normal;
+            text-transform: uppercase;
+         }
+         .container{
+             margin:0;
+             padding:0;
+         }
+         .image-top{
+            background-image: url("img/top_novidades_blue.jpg");
+            background-repeat: none;
+            background-size: cover;
+            background-position: center center;
+            padding-bottom: 150px;
+            padding-top: 150px;
+            height: 334px;
+            margin-top: 89px;
+            color: white;
+         }
+         .image-top h2{
+            text-align: center;
+            vertical-align: middle;
+            letter-spacing: 2px;
+            font-size: 1.8rem;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: normal;
+            width: 100%;
+         }
+         #searchHere{
+             border-radius:0;
+         }
+         .image img{
+             height: auto;
+             border-bottom: 5px solid #16c5fe;
+             border-top-left-radius: 2px;
+             border-top-right-radius: 2px;
+         }
+         .image a{
+             text-decoration:none;
+             color:#8c8c8c;
+             vertical-align: top;
+             font-size: 0.9rem;
+             font-weight: bold;
+         }
+         .image a:hover{
+             color:#16c5fe;
+         }
+         .image{
+             border-bottom: 1px solid #e8e8e8;
+             margin-bottom: 0;
+            
+         }
+      
+         .data_img{
+            color: #fff;
+            font-size: 1.0rem;
+            z-index:1;
+            position: absolute;
+            padding: 12px 30px;
+            background-color: #62d8fe;
+            font-weight: 600;
+            font-family: Helvetica Neue Medium;
+            margin-top: -61px;
+         }
+         .images-group{
+             display:flex;
+         }
+         .left-img{
+             width: 50%;
+             margin: 20px
+         }
+         .right-img{
+             width: 50%;
+             margin:20px;
+         }
+         .box-twitter, .twitter-timeline {
+             height: 200px;
+             overflow: scroll;
+         }
+         .footer-t{
+             font-size: .75rem;
+             padding:5px;
+    
+         }
+         .footer-t  .inc{
+             padding-right: 70px;
+             margin-left:5px;
+             width: 100%;
+         }
+         .twitter{
+             height: 200px;
+             width: 50%;
+             overflow: scroll;
+         }
+
         @media(max-width: 994px){
-           #contratando{
-               display: none;
-               margin:0;
-               padding:0;
-           }
+          
            .collapse{
                 margin-left:0px;
+               
             }
+           
         }
     </style>
 </head>
 <body>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
                 <div class="container-fluid">
-                        <a href="" class="navbar-brand" id="logo4"><img src="img/cropped-logo_GrupoForLogic.png" alt="logo4L"></a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                       
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
                           <span class="navbar-toggler-icon"></span>
                         </button>
+                        <a href="" class="navbar-brand d-none d-lg-block d-inline-block align-top" id="logo4"><img class="hidden-lg" src="img/cropped-logo_GrupoForLogic.png" alt="logo4L"></a>
                         <div class="collapse navbar-collapse" id="navbarNav">
                           <ul class="navbar-nav text-center navbar-right">
-                            <li class="nav-item active">
+                            <li class="nav-item">
                               <a class="nav-link" href="#">início <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
@@ -82,17 +171,117 @@
                             
                           </ul>
                         </div>
+                        
                     </div>
-                        <a href="#" id="contratando">
+                    <a href="#" id="contratando">
                             <img src="img/estamos-contratando.png" alt="contratando">
-                        </a>
-                      </nav>
+                    </a>
+                </nav>
+                <div class="image-top">
+                        <h2>Novidades Grupo Forlogic</h2>
+                </div>
+                <div class="container-fluid">
+                   <div class="row">
+                        <div class="col-lg-12">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="searchHere" aria-describedby="searchHere" placeholder="Digite aqui o que deseja pesquisar...">
+                                </div>
+                        </div>
+                   </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="images-group">
+                                <div class="left-img">
+                                        <div class="image">
+                                            <a href="" >
+                                                <img src="img/presenteVerde.jpg" alt="presentes verdes" class="figure-img img-fluid">
+                                                <div class="data_img">
+                                                    26/12/2017
+                                                </div>
+                                                <h4>Veja o que a equipe da Forlogic desejou aos clientes nesse fim de 2017!</h4>
+                                                
+                                                <p>Essa até poderia ser mais uma das mensagens que você recebeu desejando 
+                                                "Feliz Natal e um próspero ano novo!", mas…</p> 
+                                                <p><i class="fa fa-arrow-right" aria-hidden="true" style="color: #16c5fe;"></i> Saiba mais</p>                                           
+                                            </a>
+                                            </div>
+                                        <div class="image">
+                                            <a href="" >
+                                            
+                                                <img src="img/aluno-destaque.jpg" alt="presentes verdes" class="figure-img img-fluid">
+                                                <div class="data_img">
+                                                    26/12/2017
                 
-                
-            <script type="text/javascript">
-                $(document).ready(function(){
-                    $("")
-                });
-            </script>
+                                                </div>
+                                                <h4>Premiação do Aluno Destaque 2017</h4>
+                                                <p>
+                                                        O Rotary Club Cornélio Procópio, em parceria com o Grupo Forlogic Software,
+                                                            realizou a cerimônia de premiação do projeto Aluno…                                            </p> 
+                                                <p><i class="fa fa-arrow-right" aria-hidden="true" style="color: #16c5fe;"></i> Saiba mais</p>  
+                                            </a>
+                                        </div>  
+                                    </div>
+                                    <div class="right-img">
+                                        <div class="image">
+                                                <a href="" >
+                                                
+                                                    <img src="img/papainoel.jpg" alt="presentes verdes" class="figure-img img-fluid">
+                                                    <div class="data_img">
+                                                        26/12/2017
+                    
+                                                    </div>
+                                                    <h4>3º ano do projeto Aluno Nota 10!</h4>
+                                                    <p>
+                                                            Mais uma vez, a Forlogic esteve presente na Escola Municipal Prof. 
+                                                            Ângelo Mazarotto para a premiação do projeto Aluno nota...</p> 
+                                                    <p><i class="fa fa-arrow-right" aria-hidden="true" style="color: #16c5fe;"></i> Saiba mais</p>  
+                                                </a>
+                                            </div>
+                                            <div class="image">
+                                                <a href="" >
+                                                
+                                                    <img src="img/jornal.jpg" alt="presentes verdes" class="figure-img img-fluid">
+                                                    <div class="data_img">
+                                                        26/12/2017
+                    
+                                                    </div>
+                                                    <h4>Forlogic Software é selecionada para o programa Scale-Up Indústria, da Endeavor</h4>
+                                                    <p>
+                                                            A Forlogic foi escolhida para participar do Scale-Up indústria, 
+                                                            da Endeavor (organização sem fins lucrativos que tem por objetivo potencializar…</p> 
+                                                    <p><i class="fa fa-arrow-right" aria-hidden="true" style="color: #16c5fe;"></i> Saiba mais</p>  
+                                                </a>
+                                           </div>
+                                     </div>
+                                     <div class="twitter">
+                                            <a class="twitter-timeline" href="https://twitter.com/forlogic?ref_src=twsrc%5Etfw">Tweets by forlogic</a> 
+                                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                     </div>
+                                     
+                                   
+                                     
+                                </div>
+                          
+                             
+                          
+                        </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-lg-12">
+                                 <h2>Novidades Anteriores</h2>
+                            </div>
+                    
+                     </div>
+                     <div class="row">
+                        <a>
+                            <img src="img/colaboradores.jpg" alt="" class="figure-img img-fluid">
+                        </a>  
+                     </div>
+                </div>
+               
+        <footer>
+
+        </footer>
+            
 </body>
 </html>
