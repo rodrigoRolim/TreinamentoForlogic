@@ -8,51 +8,84 @@
     <style>
         .container{
             display:table;
-            border: 2px solid gray;
+            
             width: 20%;
+            padding: 10px 0 0 0;
+            margin: 0 auto;
+            margin-top: 100px;
+            background-color: lightblue;  
         }
         .result{
-            width:100%;
-            border: 1px solid;
-        
+            width: 99.3%;
+            border: 1px solid transparent;
+            display: table-caption;
+            background-color: lightblue; 
+            color: white;
+           
+            
+        }
+       
+        .result p{
+            direction:rtl;
+            margin-right: 20px;
+            font-family: "Open Sans Regular";
+            font-size: 20px;
+            text-transform: uppercase;
         }
         .digit, .equal, .ac, .solidus, .mult, .minus, .plus{
             display: table-cell;
-            border: 1px solid;
+            border: 1px solid lightblue;
             text-align: center;
+            width: 10%;
+            background-color: rgba(0,0,0,.4);
+            color: white;
+            font-size: 19px;
         }
         [class*="row-"]{
             display: table-row;
         }
-        
+        span{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .h:hover{
+            background-color: aquamarine;
+            cursor: pointer;
+        }
+        .h:active{
+            background-color:aqua;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="result">result</div>
+       <div class="result"><p>resultado</p></div>
         <div class="row-1">
-            <div class="digit">&#x31;</div>
-            <div class="digit">&#x32;</div>
-            <div class="digit">&#x33;</div>
-            <div class="plus">&#x2B;</div>
+            <div class="digit h"><span>&#x31;</span></div>
+            <div class="digit h"><span>&#x32;</span></div>
+            <div class="digit h"><span>&#x33;</span></div>
+            <div class="plus h"><span>&#x2B;</span></div>
         </div>
         <div class="row-2">
-            <div class="digit">&#x34;</div>
-            <div class="digit">&#x35;</div>
-            <div class="digit">&#x36;</div>
-            <div class="minus">&#x2D;</div>
+            <div class="digit h"><span>&#x34;</span></div>
+            <div class="digit h"><span>&#x35;</span></div>
+            <div class="digit h s"><span>&#x36;</span></div>
+            <div class="minus h"><span>&#x2D;</span></div>
         </div>
         <div class="row-3">
-            <div class="digit">&#x37;</div>
-            <div class="digit">&#x38;</div>
-            <div class="digit">&#x39;</div>
-            <div class="mult">&#x2A;</div>
+            <div class="digit h"><span>&#x37;</span></div>
+            <div class="digit h"><span>&#x38;</span></div>
+            <div class="digit h n"><span>&#x39;</span></div>
+            <div class="mult h"><span>&#x2A;</span></div>
         </div>
         <div class="row-4">
-            <div class="digit">&#x30;</div>
-            <div class="equal">&#x3D;</div>
-            <div class="ac">&#x41;&#x43;</div>
-            <div class="solidus">&#x2F;</div>
+            <div class="digit h"><span>&#x30;</span></div>
+            <div class="equal h"><span>&#x3D;</span></div>
+            <div class="ac h"><span>&#x41;&#x43;</span></div>
+            <div class="solidus h"><span>&#x2F;</span></div>
         </div>
        
     </div>
