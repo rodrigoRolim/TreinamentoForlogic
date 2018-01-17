@@ -24,8 +24,12 @@
             font-size: 100%;
         }
         .navbar{
-           padding:0 5px;;
-            border-bottom: 1px solid #e7e7e7;
+           padding:0;
+           border-bottom: 1px solid #e7e7e7;
+           border-top:0;
+           border-right:0;
+           border-left:0;
+           
         }
         .nav-link{
             margin-top: 1px;
@@ -35,9 +39,9 @@
             color: #777;
             font-style: normal;
             text-transform: uppercase;
-            padding: 1px 0px;
+           
          }
-         .container{
+         .container-fluid{
              margin:0;
              padding:0;
          }
@@ -51,6 +55,7 @@
             height: 334px;
             margin-top: 89px;
             color: white;
+            width:100%;
          }
          .image-top h2{
             text-align: center;
@@ -113,14 +118,16 @@
             font-family: Helvetica Neue Medium;
             margin-top: -65px;
          }
-         .images-group{
-             display:flex;
-         }
+       
          .tw{
              border-radius: 2px;
+             margin-top: 35px;
          }
          .main{
             background-color: #f9f9f9;
+            margin:0;
+            padding:0;
+            
          }
          .float-left{
             border-bottom: 5px solid #16c5fe;
@@ -131,77 +138,91 @@
                 background-color: #1a1a1a;               
                
                 
-            }
-          
-            .bellow{
-                background-color: #000000;
-                text-align: center;
-                color:#f9f9f9;
-                font-size: 0.85rem;
-                padding: 9px 0;
-                line-height: 22px;
-                letter-spacing: 0px;
-                margin:0;
-            }
-            .bellow p{
+         }
+        .bellow{
+            background-color: #000000;
+            text-align: center;
+            color:#f9f9f9;
+            font-size: 0.85rem;
+            padding:0;
+            line-height: 22px;
+            letter-spacing: 0px;
+            margin:0;
+        }
+        .bellow p{
 
-                padding-top:10px;
-            }
+            padding-top:10px;
+        }
          .logo-footer img{
                 width: 38%;
                 background-position: top left;
                 
         }
         .adress-comp{
-                color:#888888;
-                font-family: "Open Sans";
-                font-weight: 500;
-                font-size: 0.95rem;
-                line-height: 23px;
-                letter-spacing: 0px;
-                background-position: top left;
-               
-                padding: 40px 0 35px 80px;
-                margin-bottom: 10px; 
-               
-            }
-            .adress-comp p{
-            	padding: 0 0 10px 0;
-            }
+            color:#888888;
+            font-family: "Open Sans";
+            font-weight: 500;
+            font-size: 0.95rem;
+            line-height: 23px;
+            letter-spacing: 0px;
+            background-position: top left;
             
-            .gallery-ins{
-                color:#888888;
-                font-size: 1.2rem;
-                
-                margin-top:45px;
-                text-align: left; 
-            }
-            .gallery-ins p{
-                margin-bottom: 20px;
-            }
-            .gallery a img{
-                padding-left:5px;
-               
-                margin-right: 0px;
-            }
-            .miniaturas, .center{
-                width: 90%;
-                margin: 0 auto;
-             
-            }
-            .pagination li{
-                padding: 0 5px;
-                border-radius:4px;
-            }
-           .container-fluid{
-               padding:0;
-               margin:0;
-           }
-            #logo4{margin-top:18px;}
-        @media(max-width: 992px){
+            padding: 40px 0 35px 80px;
+            margin-bottom: 10px; 
+            
+        }
+        .adress-comp p{
+            padding: 0 0 10px 0;
+        }
+        
+        .gallery-ins{
+            color:#888888;
+            font-size: 1.2rem;
+            margin-top:45px;
+            text-align: left; 
+        }
+        .gallery-ins p{
+            margin-bottom: 20px;
+        }
+        .gallery a img{
+            padding-left:5px;
+            margin-right: 0px;
+        }
+        .miniaturas, .center{
+            width: 90%;
+            margin: 0 auto;
+        }
+        .collapse a{
+            padding: 0;
+            border-radius:4px;
+        }
+        .collapse{
+            margin-left: 20px;
+        }
+        .container-fluid{
+            padding:0;
+            margin:0;
+            
+        }
+        #logo4{
+            padding: 22px 0px 20px 35px;
+            margin-left: 50px;
+        }
+        button{
+            margin: 30px;
+            border-radius: 4px;
+        }
+        button:active{
+            background-color: #ddd;                
+        }
+        .nav-item{
+            margin: 30px 0;
+        }
+        @media(max-width: 405px){
           
           #logo4{
-              display:none;
+              padding-left:0;
+              margin-right:0;
           }
            
         }
@@ -209,49 +230,48 @@
 </head>
 <body>
       
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                                <a href="" class="navbar-brand d-lg-none d-xl-block d-block text-left" id="logo4"><img class="hidden-lg" src="img/cropped-logo_GrupoForLogic.png" alt="logo4L"></a>
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="true" aria-label="Toggle navigation">
-                                  <span class="navbar-toggler-icon"></span>
-                                </button>
-                                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                                  <div class="navbar-nav">
-                                    <a class="nav-item nav-link active" href="#">INICIO </a>
-                                    <a class="nav-item nav-link" href="#">ÁREAS DE NEGOCIO</a>
-                                    <a class="nav-item nav-link" href="#">QUEM SOMOS</a>
-                                    <a class="nav-item nav-link" href="#">CLIENTES</a>
-                                    <a class="nav-item nav-link" href="#">NOVIDADES</a>
-                                    <a class="nav-item nav-link" href="#">FALE CONOSCO</a>
-                                    <a class="nav-item nav-link" href="#">OUVIDORIA</a>
-                                  </div>
-                                  <a href="#" id="contratando" class="navbar-right d-none d-lg-block">
-                                    <img src="img/estamos-contratando.png" alt="contratando">
-                                  </a>
-                                </div>
-                        </nav>
-                </div>
-                    
-            </div>
-                
-           </div>
+<div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+     
+                <a href="" style="width:30%;" class="navbar-brand d-lg-none d-xl-block d-block text-left" id="logo4"><img class="hidden-lg" src="img/cropped-logo_GrupoForLogic.png" alt="logo4L"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="true" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav text-center"  style="width:92%; margin:0 auto; ">
+                            <a class="nav-item nav-link active" href="#">INICIO </a>
+                            <a class="nav-item nav-link" href="#">ÁREAS DE NEGOCIO</a>
+                            <a class="nav-item nav-link" href="#">QUEM SOMOS</a>
+                            <a class="nav-item nav-link" href="#">CLIENTES</a>
+                            <a class="nav-item nav-link" href="#">NOVIDADES</a>
+                            <a class="nav-item nav-link" href="#">FALE CONOSCO</a>
+                            <a class="nav-item nav-link" href="#">OUVIDORIA</a>
+                            <a href="#" id="contratando" class="navbar-right d-none d-lg-block" >
+                                <img src="img/estamos-contratando.png" alt="contratando">
+                            </a>
+                        </div>
+                        
+                    </div>
+            </nav>
+</div>
+   
+            
+         
            
     <div class="image-top">
             <h2>Novidades Grupo Forlogic</h2>
     </div>
     <div class="container-fluid main">
         <div class="row center">
-            <div class="col-lg-11">
-                <div class="form-group">
+            <div class="col-lg-11 col-xl-11 col-sm-12">
+                <div class="form-group" style="margin-top:20px;">
                     <input type="email" class="form-control" id="searchHere" aria-describedby="searchHere" placeholder="Digite aqui o que deseja pesquisar...">
                 </div>
             </div>
         </div>
         <div class="row center">
-                           
-                    <div class="col-lg-4">
+             
+                    <div class="col-lg-4 col-xl-4 col-sm-10">
                             <div class="image">
                                 <a href="" >
                                     <div class="img">
@@ -289,7 +309,7 @@
                                 </a>
                             </div>  
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-xl-4 col-sm-10">
                             <div class="image">
                                     <a href="" >
                                         <div class="img">
@@ -330,18 +350,18 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-lg-4 tw">
+                            <div class="col-lg-4 col-xl-4 col-sm-9 tw">
                                 <a class="twitter-timeline embed-responsive-item" href="https://twitter.com/forlogic?ref_src=twsrc%5Etfw" height="250px">Tweets by forlogic</a> 
                                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                             </div>
                         </div>
                     <div class="row center">
-                        <div class="col-lg-12" style="margin-bottom:25px; color:#68adce;">
+                        <div class="col-lg-12 col-xl-12 col-sm-10" style="margin-bottom:25px; color:#68adce;">
                                 <h2>Novidades Anteriores</h2>
                         </div>
                      </div>
                      <div class="row miniaturas" style="border-bottom: 1px solid #333; margin-bottom: 30px;">
-                         <div class="col-lg-6">
+                         <div class="col-lg-6 col-xl-6 col-sm-12">
                                 <a href="" class="min_img">
                                     <figure class="figure">
                                         <img src="img/colaboradores.jpg" alt="" class="float-left figure-img img-fluid" width= "22%;" style="margin-right:20px; margin-top:15px;">
@@ -355,7 +375,7 @@
                                 </a>  
                                 <a href="" class="min_img">
                                         <figure class="figure">
-                                            <img src="img/colaboradores.jpg" alt="" class="float-left figure-img img-fluid" width= "22%;" style="margin-right:20px; margin-top:15px;">
+                                            <img src="img/pessoas.png" alt="" class="float-left figure-img img-fluid" width= "22%;" style="margin-right:20px; margin-top:15px;">
                                             <h4>Colaboradores da Forlogic participam do Dia do Desafio</h4>
                                             <p>
                                                     Dia 31 de maio de 2017 foi o Dia do Desafio, ação 
@@ -366,7 +386,7 @@
                                 </a> 
                                     <a href="" class="min_img">
                                             <figure class="figure">
-                                                <img src="img/colaboradores.jpg" alt="" class="float-left figure-img img-fluid" width= "22%;" style="margin-right:20px; margin-top:15px;">
+                                                <img src="img/saude.jpg" alt="" class="float-left figure-img img-fluid" width= "22%;" style="margin-right:20px; margin-top:15px;">
                                                 <h4>Colaboradores da Forlogic participam do Dia do Desafio</h4>
                                                 <p>
                                                         Dia 31 de maio de 2017 foi o Dia do Desafio, ação 
@@ -377,7 +397,7 @@
                                      </a> 
                                         <a href="" class="min_img">
                                                 <figure class="figure">
-                                                    <img src="img/colaboradores.jpg" alt="" class="float-left figure-img img-fluid" width= "22%;" style="margin-right:20px; margin-top:15px;">
+                                                    <img src="img/velhos.jpg" alt="" class="float-left figure-img img-fluid" width= "22%;" style="margin-right:20px; margin-top:15px;">
                                                     <h4>Colaboradores da Forlogic participam do Dia do Desafio</h4>
                                                     <p>
                                                             Dia 31 de maio de 2017 foi o Dia do Desafio, ação 
@@ -388,7 +408,7 @@
                                         </a> 
                                             <a href="" class="min_img">
                                                     <figure class="figure">
-                                                        <img src="img/colaboradores.jpg" alt="" class="float-left figure-img img-fluid" width= "22%;" style="margin-right:20px; margin-top:15px;">
+                                                        <img src="img/comida.jpg" alt="" class="float-left figure-img img-fluid" width= "22%;" style="margin-right:20px; margin-top:15px;">
                                                         <h4>Colaboradores da Forlogic participam do Dia do Desafio</h4>
                                                         <p>
                                                                 Dia 31 de maio de 2017 foi o Dia do Desafio, ação 
@@ -399,10 +419,10 @@
                                             </a> 
                            
                          </div>
-                         <div class="col-lg-6">
+                         <div class="col-lg-6 col-xl-6 col-sm-12">
                                 <a href="" class="min_img">
                                         <figure class="figure">
-                                            <img src="img/colaboradores.jpg" alt="" class="float-left figure-img img-fluid" width= "22%;" style="margin-right:20px; margin-top:15px;">
+                                            <img src="img/internacional-software.jpg" alt="" class="float-left figure-img img-fluid" width= "22%;" style="margin-right:20px; margin-top:15px;">
                                             <h4>Colaboradores da Forlogic participam do Dia do Desafio</h4>
                                             <p>
                                                     Dia 31 de maio de 2017 foi o Dia do Desafio, ação 
@@ -413,7 +433,7 @@
                                     </a>  
                                     <a href="" class="min_img">
                                             <figure class="figure">
-                                                <img src="img/colaboradores.jpg" alt="" class="float-left figure-img img-fluid" width= "22%;" style="margin-right:20px; margin-top:15px;">
+                                                <img src="img/injecao.jpg" alt="" class="float-left figure-img img-fluid" width= "22%;" style="margin-right:20px; margin-top:15px;">
                                                 <h4>Colaboradores da Forlogic participam do Dia do Desafio</h4>
                                                 <p>
                                                         Dia 31 de maio de 2017 foi o Dia do Desafio, ação 
@@ -424,7 +444,7 @@
                                     </a> 
                                         <a href="" class="min_img">
                                                 <figure class="figure">
-                                                    <img src="img/colaboradores.jpg" alt="" class="float-left figure-img img-fluid" width= "22%;" style="margin-right:20px; margin-top:15px;">
+                                                    <img src="img/escrevendo.jpg" alt="" class="float-left figure-img img-fluid" width= "22%;" style="margin-right:20px; margin-top:15px;">
                                                     <h4>Colaboradores da Forlogic participam do Dia do Desafio</h4>
                                                     <p>
                                                             Dia 31 de maio de 2017 foi o Dia do Desafio, ação 
@@ -435,7 +455,7 @@
                                          </a> 
                                             <a href="" class="min_img">
                                                     <figure class="figure">
-                                                        <img src="img/colaboradores.jpg" alt="" class="float-left figure-img img-fluid" width= "22%;" style="margin-right:20px; margin-top:15px;">
+                                                        <img src="img/fazerobem.jpg" alt="" class="float-left figure-img img-fluid" width= "22%;" style="margin-right:20px; margin-top:15px;">
                                                         <h4>Colaboradores da Forlogic participam do Dia do Desafio</h4>
                                                         <p>
                                                                 Dia 31 de maio de 2017 foi o Dia do Desafio, ação 
@@ -446,7 +466,7 @@
                                             </a> 
                                                 <a href="" class="min_img">
                                                         <figure class="figure">
-                                                            <img src="img/colaboradores.jpg" alt="" class="float-left figure-img img-fluid" width= "22%;" style="margin-right:20px; margin-top:15px;">
+                                                            <img src="img/falacap.jpg" alt="" class="float-left figure-img img-fluid" width= "22%;" style="margin-right:20px; margin-top:15px;">
                                                             <h4>Colaboradores da Forlogic participam do Dia do Desafio</h4>
                                                             <p>
                                                                     Dia 31 de maio de 2017 foi o Dia do Desafio, ação 
@@ -457,9 +477,9 @@
                                                 </a> 
                          </div>
                      </div>
-                     <div class="row">
-                         <div class="col-lg-2" style="margin:0 auto; ">
-                                <nav aria-label="Page navigation example">
+                     <div class="row center">
+                         <div class="col-lg-2 col-5 col-sm-4" style="margin:0 auto; ">
+                                <nav aria-label="Page navigation example text-center">
                                         <ul class="pagination">
                                           <li class="page-item">
                                             <a class="page-link" href="#" aria-label="Previous">
@@ -477,14 +497,14 @@
                                             </a>
                                           </li>
                                         </ul>
-                                      </nav>
+                                </nav>
                          </div>
                      </div>
                 </div>
                
-        <footer class="container-fluid">
+        <footer class="container-fluid" style="width:100%;">
             <div class="row above">
-                    <div class="col-lg-5">
+                    <div class="col-lg-5 ">
                             <div class="adress-comp">
                                     <div class="logo-footer">
                                             <p><img src="img/LogoGrupo_Oficial-cinza.png" alt=""></p>
@@ -498,8 +518,8 @@
                                 </p>
                             </div>
                     </div>
-                    <div class="col-lg-7">
-                            <div class="gallery-ins">
+                    <div class="col-lg-7 col-12 col-sm-12">
+                            <div class="gallery-ins" style="margin:30px auto;">
                                     <div><p>Instagram</p></div>
                                     <div class="gallery">
                                         <a href="" class="foto_1"><img src="img/foto_1.jpg" alt="foto instagram" ></a>
