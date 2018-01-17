@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container{
+            display:table;
+            border: 2px solid gray;
+            width: 20%;
+        }
+        .result{
+            width:100%;
+            border: 1px solid;
+        
+        }
+        .digit, .equal, .ac, .solidus, .mult, .minus, .plus{
+            display: table-cell;
+            border: 1px solid;
+            text-align: center;
+        }
+        [class*="row-"]{
+            display: table-row;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="result">result</div>
+        <div class="row-1">
+            <div class="digit">&#x31;</div>
+            <div class="digit">&#x32;</div>
+            <div class="digit">&#x33;</div>
+            <div class="plus">&#x2B;</div>
+        </div>
+        <div class="row-2">
+            <div class="digit">&#x34;</div>
+            <div class="digit">&#x35;</div>
+            <div class="digit">&#x36;</div>
+            <div class="minus">&#x2D;</div>
+        </div>
+        <div class="row-3">
+            <div class="digit">&#x37;</div>
+            <div class="digit">&#x38;</div>
+            <div class="digit">&#x39;</div>
+            <div class="mult">&#x2A;</div>
+        </div>
+        <div class="row-4">
+            <div class="digit">&#x30;</div>
+            <div class="equal">&#x3D;</div>
+            <div class="ac">&#x41;&#x43;</div>
+            <div class="solidus">&#x2F;</div>
+        </div>
+       
+    </div>
+</body>
+</html>
