@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="fonts/fonts.css" />
@@ -23,17 +24,18 @@
             font-size: 100%;
         }
         .navbar{
-            margin:0;
-            padding:0;
+           padding:0 5px;;
+            border-bottom: 1px solid #e7e7e7;
         }
         .nav-link{
             margin-top: 1px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: bold;
             font-family: 'Helvetica Neue Bold',Helvetica;
             color: #777;
             font-style: normal;
             text-transform: uppercase;
+            padding: 1px 0px;
          }
          .container{
              margin:0;
@@ -62,28 +64,44 @@
          #searchHere{
              border-radius:0;
          }
-         .image img{
-             height: auto;
+         .image .img{
+             height: 205px;
              border-bottom: 5px solid #16c5fe;
              border-top-left-radius: 2px;
              border-top-right-radius: 2px;
+             vertical-align: middle;
          }
-         .image a{
+         .img img{
+             border-radius: 4px;
+         }
+         .img{
+             margin-bottom: 20px;
+         }
+         .image a, .min_img{
              text-decoration:none;
              color:#8c8c8c;
              vertical-align: top;
-             font-size: 0.9rem;
+             font-size: 0.85rem;
              font-weight: bold;
          }
-         .image a:hover{
+         .image a:hover, .min_img:hover{
              color:#16c5fe;
+             text-decoration:none;
          }
          .image{
+             
              border-bottom: 1px solid #e8e8e8;
              margin-bottom: 0;
-            
+             margin-top: 40px;
          }
-      
+         .presentes{
+             height: 205px;
+             width: 100%;
+         }
+         .fig{
+             height: 200px;
+             overflow: hidden;
+         }
          .data_img{
             color: #fff;
             font-size: 1.0rem;
@@ -93,194 +111,412 @@
             background-color: #62d8fe;
             font-weight: 600;
             font-family: Helvetica Neue Medium;
-            margin-top: -61px;
+            margin-top: -65px;
          }
          .images-group{
              display:flex;
          }
-         .left-img{
-             width: 50%;
-             margin: 20px
+         .tw{
+             border-radius: 2px;
          }
-         .right-img{
-             width: 50%;
-             margin:20px;
+         .main{
+            background-color: #f9f9f9;
          }
-         .box-twitter, .twitter-timeline {
-             height: 200px;
-             overflow: scroll;
+         .float-left{
+            border-bottom: 5px solid #16c5fe;
+            border-top-left-radius:4px;
+            border-top-right-radius:4px;
          }
-         .footer-t{
-             font-size: .75rem;
-             padding:5px;
-    
-         }
-         .footer-t  .inc{
-             padding-right: 70px;
-             margin-left:5px;
-             width: 100%;
-         }
-         .twitter{
-             height: 200px;
-             width: 50%;
-             overflow: scroll;
-         }
-
-        @media(max-width: 994px){
+         .above{
+                background-color: #1a1a1a;               
+               
+                
+            }
           
-           .collapse{
-                margin-left:0px;
+            .bellow{
+                background-color: #000000;
+                text-align: center;
+                color:#f9f9f9;
+                font-size: 0.85rem;
+                padding: 9px 0;
+                line-height: 22px;
+                letter-spacing: 0px;
+                margin:0;
+            }
+            .bellow p{
+
+                padding-top:10px;
+            }
+         .logo-footer img{
+                width: 38%;
+                background-position: top left;
+                
+        }
+        .adress-comp{
+                color:#888888;
+                font-family: "Open Sans";
+                font-weight: 500;
+                font-size: 0.95rem;
+                line-height: 23px;
+                letter-spacing: 0px;
+                background-position: top left;
+               
+                padding: 40px 0 35px 80px;
+                margin-bottom: 10px; 
                
             }
+            .adress-comp p{
+            	padding: 0 0 10px 0;
+            }
+            
+            .gallery-ins{
+                color:#888888;
+                font-size: 1.2rem;
+                
+                margin-top:45px;
+                text-align: left; 
+            }
+            .gallery-ins p{
+                margin-bottom: 20px;
+            }
+            .gallery a img{
+                padding-left:5px;
+               
+                margin-right: 0px;
+            }
+            .miniaturas, .center{
+                width: 90%;
+                margin: 0 auto;
+             
+            }
+            .pagination li{
+                padding: 0 5px;
+                border-radius:4px;
+            }
+           .container-fluid{
+               padding:0;
+               margin:0;
+           }
+            #logo4{margin-top:18px;}
+        @media(max-width: 992px){
+          
+          #logo4{
+              display:none;
+          }
            
         }
     </style>
 </head>
 <body>
-
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-                <div class="container-fluid">
-                       
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
-                          <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <a href="" class="navbar-brand d-none d-lg-block d-inline-block align-top" id="logo4"><img class="hidden-lg" src="img/cropped-logo_GrupoForLogic.png" alt="logo4L"></a>
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                          <ul class="navbar-nav text-center navbar-right">
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">início <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">áreas de negócio</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">quem somos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">clientes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">novidades</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">fale conosco</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">ouvidoria</a>
-                            </li>
-                            
-                          </ul>
-                        </div>
-                        
-                    </div>
-                    <a href="#" id="contratando">
-                            <img src="img/estamos-contratando.png" alt="contratando">
-                    </a>
-                </nav>
-                <div class="image-top">
-                        <h2>Novidades Grupo Forlogic</h2>
-                </div>
-                <div class="container-fluid">
-                   <div class="row">
-                        <div class="col-lg-12">
-                                <div class="form-group">
-                                    <input type="email" class="form-control" id="searchHere" aria-describedby="searchHere" placeholder="Digite aqui o que deseja pesquisar...">
+      
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                                <a href="" class="navbar-brand d-lg-none d-xl-block d-block text-left" id="logo4"><img class="hidden-lg" src="img/cropped-logo_GrupoForLogic.png" alt="logo4L"></a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="true" aria-label="Toggle navigation">
+                                  <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                  <div class="navbar-nav">
+                                    <a class="nav-item nav-link active" href="#">INICIO </a>
+                                    <a class="nav-item nav-link" href="#">ÁREAS DE NEGOCIO</a>
+                                    <a class="nav-item nav-link" href="#">QUEM SOMOS</a>
+                                    <a class="nav-item nav-link" href="#">CLIENTES</a>
+                                    <a class="nav-item nav-link" href="#">NOVIDADES</a>
+                                    <a class="nav-item nav-link" href="#">FALE CONOSCO</a>
+                                    <a class="nav-item nav-link" href="#">OUVIDORIA</a>
+                                  </div>
+                                  <a href="#" id="contratando" class="navbar-right d-none d-lg-block">
+                                    <img src="img/estamos-contratando.png" alt="contratando">
+                                  </a>
                                 </div>
+                        </nav>
+                </div>
+                    
+            </div>
+                
+           </div>
+           
+    <div class="image-top">
+            <h2>Novidades Grupo Forlogic</h2>
+    </div>
+    <div class="container-fluid main">
+        <div class="row center">
+            <div class="col-lg-11">
+                <div class="form-group">
+                    <input type="email" class="form-control" id="searchHere" aria-describedby="searchHere" placeholder="Digite aqui o que deseja pesquisar...">
+                </div>
+            </div>
+        </div>
+        <div class="row center">
+                           
+                    <div class="col-lg-4">
+                            <div class="image">
+                                <a href="" >
+                                    <div class="img">
+                                        <figure class="figure fig">
+                                            <img class="presentes" src="img/presenteVerde.jpg" alt="presentes verdes" class="figure-img img-fluid">     
+                                        </figure>
+                                        <div class="data_img">
+                                            26/12/2017
+                                        </div>
+                                    </div>
+                                    
+                                    <h4>Veja o que a equipe da Forlogic desejou aos clientes nesse fim de 2017!</h4>
+                                    
+                                    <p>Essa até poderia ser mais uma das mensagens que você recebeu desejando 
+                                    "Feliz Natal e um próspero ano novo!", mas…</p> 
+                                    <p><i class="fa fa-arrow-right" aria-hidden="true" style="color: #16c5fe;"></i> Saiba mais</p>                                           
+                                </a>
+                            </div>
+                            <div class="image">
+                                <a href="" >
+                                    <div class="img">
+                                        <figure class="figure fig">
+                                            <img src="img/aluno-destaque.jpg" alt="presentes verdes" class="figure-img img-fluid">
+                                        </figure>
+                                        <div class="data_img">
+                                                26/12/2017
+            
+                                        </div>
+                                    </div>
+                                    <h4>Premiação do Aluno Destaque 2017</h4>
+                                    <p>
+                                            O Rotary Club Cornélio Procópio, em parceria com o Grupo Forlogic Software,
+                                                realizou a cerimônia de premiação do projeto Aluno…                                            </p> 
+                                    <p><i class="fa fa-arrow-right" aria-hidden="true" style="color: #16c5fe;"></i> Saiba mais</p>  
+                                </a>
+                            </div>  
                         </div>
-                   </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="images-group">
-                                <div class="left-img">
-                                        <div class="image">
-                                            <a href="" >
-                                                <img src="img/presenteVerde.jpg" alt="presentes verdes" class="figure-img img-fluid">
-                                                <div class="data_img">
-                                                    26/12/2017
-                                                </div>
-                                                <h4>Veja o que a equipe da Forlogic desejou aos clientes nesse fim de 2017!</h4>
+                        <div class="col-lg-4">
+                            <div class="image">
+                                    <a href="" >
+                                        <div class="img">
+                                            <figure class="figure fig">
+                                                <img src="img/papainoel.jpg" alt="presentes verdes" class="figure-img img-fluid" >
                                                 
-                                                <p>Essa até poderia ser mais uma das mensagens que você recebeu desejando 
-                                                "Feliz Natal e um próspero ano novo!", mas…</p> 
-                                                <p><i class="fa fa-arrow-right" aria-hidden="true" style="color: #16c5fe;"></i> Saiba mais</p>                                           
-                                            </a>
-                                            </div>
-                                        <div class="image">
-                                            <a href="" >
-                                            
-                                                <img src="img/aluno-destaque.jpg" alt="presentes verdes" class="figure-img img-fluid">
-                                                <div class="data_img">
+                                            </figure>
+                                            <div class="data_img">
                                                     26/12/2017
                 
-                                                </div>
-                                                <h4>Premiação do Aluno Destaque 2017</h4>
-                                                <p>
-                                                        O Rotary Club Cornélio Procópio, em parceria com o Grupo Forlogic Software,
-                                                            realizou a cerimônia de premiação do projeto Aluno…                                            </p> 
-                                                <p><i class="fa fa-arrow-right" aria-hidden="true" style="color: #16c5fe;"></i> Saiba mais</p>  
-                                            </a>
-                                        </div>  
-                                    </div>
-                                    <div class="right-img">
-                                        <div class="image">
-                                                <a href="" >
-                                                
-                                                    <img src="img/papainoel.jpg" alt="presentes verdes" class="figure-img img-fluid">
-                                                    <div class="data_img">
-                                                        26/12/2017
-                    
-                                                    </div>
-                                                    <h4>3º ano do projeto Aluno Nota 10!</h4>
-                                                    <p>
-                                                            Mais uma vez, a Forlogic esteve presente na Escola Municipal Prof. 
-                                                            Ângelo Mazarotto para a premiação do projeto Aluno nota...</p> 
-                                                    <p><i class="fa fa-arrow-right" aria-hidden="true" style="color: #16c5fe;"></i> Saiba mais</p>  
-                                                </a>
                                             </div>
-                                            <div class="image">
-                                                <a href="" >
-                                                
-                                                    <img src="img/jornal.jpg" alt="presentes verdes" class="figure-img img-fluid">
-                                                    <div class="data_img">
-                                                        26/12/2017
-                    
-                                                    </div>
-                                                    <h4>Forlogic Software é selecionada para o programa Scale-Up Indústria, da Endeavor</h4>
-                                                    <p>
-                                                            A Forlogic foi escolhida para participar do Scale-Up indústria, 
-                                                            da Endeavor (organização sem fins lucrativos que tem por objetivo potencializar…</p> 
-                                                    <p><i class="fa fa-arrow-right" aria-hidden="true" style="color: #16c5fe;"></i> Saiba mais</p>  
-                                                </a>
-                                           </div>
-                                     </div>
-                                     <div class="twitter">
-                                            <a class="twitter-timeline" href="https://twitter.com/forlogic?ref_src=twsrc%5Etfw">Tweets by forlogic</a> 
-                                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                                     </div>
-                                     
-                                   
-                                     
+                                        </div>
+                                        
+                                        <h4>3º ano do projeto Aluno Nota 10!</h4>
+                                        <p>
+                                                Mais uma vez, a Forlogic esteve presente na Escola Municipal Prof. 
+                                                Ângelo Mazarotto para a premiação do projeto Aluno nota...</p> 
+                                        <p><i class="fa fa-arrow-right" aria-hidden="true" style="color: #16c5fe;"></i> Saiba mais</p>  
+                                    </a>
                                 </div>
-                          
-                             
-                          
-                        </div>
-                    </div>
-                    <div class="row">
-                            <div class="col-lg-12">
-                                 <h2>Novidades Anteriores</h2>
+                                <div class="image" style="margin-top:96px;">
+                                    <a href="" >
+                                        <div class="img">
+                                            <figure class="figure fig">
+                                                <img src="img/jornal.jpg" alt="presentes verdes" class="figure-img img-fluid">
+                                                
+                                            </figure>
+                                            <div class="data_img">
+                                                    26/12/2017
+                
+                                            </div>
+                                        </div>
+                                        <h4>Forlogic Software é selecionada para o programa Scale-Up Indústria, da Endeavor</h4>
+                                        <p>
+                                                A Forlogic foi escolhida para participar do Scale-Up indústria, 
+                                                da Endeavor (organização sem fins lucrativos que tem por objetivo potencializar…</p> 
+                                        <p><i class="fa fa-arrow-right" aria-hidden="true" style="color: #16c5fe;"></i> Saiba mais</p>  
+                                    </a>
+                                </div>
                             </div>
-                    
+                            <div class="col-lg-4 tw">
+                                <a class="twitter-timeline embed-responsive-item" href="https://twitter.com/forlogic?ref_src=twsrc%5Etfw" height="250px">Tweets by forlogic</a> 
+                                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            </div>
+                        </div>
+                    <div class="row center">
+                        <div class="col-lg-12" style="margin-bottom:25px; color:#68adce;">
+                                <h2>Novidades Anteriores</h2>
+                        </div>
+                     </div>
+                     <div class="row miniaturas" style="border-bottom: 1px solid #333; margin-bottom: 30px;">
+                         <div class="col-lg-6">
+                                <a href="" class="min_img">
+                                    <figure class="figure">
+                                        <img src="img/colaboradores.jpg" alt="" class="float-left figure-img img-fluid" width= "22%;" style="margin-right:20px; margin-top:15px;">
+                                        <h4>Colaboradores da Forlogic participam do Dia do Desafio</h4>
+                                        <p>
+                                                Dia 31 de maio de 2017 foi o Dia do Desafio, ação 
+                                                que tem como objetivo combater o sedentarismo. A…
+                                        </p>
+                                    </figure>
+                                    
+                                </a>  
+                                <a href="" class="min_img">
+                                        <figure class="figure">
+                                            <img src="img/colaboradores.jpg" alt="" class="float-left figure-img img-fluid" width= "22%;" style="margin-right:20px; margin-top:15px;">
+                                            <h4>Colaboradores da Forlogic participam do Dia do Desafio</h4>
+                                            <p>
+                                                    Dia 31 de maio de 2017 foi o Dia do Desafio, ação 
+                                                    que tem como objetivo combater o sedentarismo. A…
+                                            </p>
+                                        </figure>
+                                        
+                                </a> 
+                                    <a href="" class="min_img">
+                                            <figure class="figure">
+                                                <img src="img/colaboradores.jpg" alt="" class="float-left figure-img img-fluid" width= "22%;" style="margin-right:20px; margin-top:15px;">
+                                                <h4>Colaboradores da Forlogic participam do Dia do Desafio</h4>
+                                                <p>
+                                                        Dia 31 de maio de 2017 foi o Dia do Desafio, ação 
+                                                        que tem como objetivo combater o sedentarismo. A…
+                                                </p>
+                                            </figure>
+                                            
+                                     </a> 
+                                        <a href="" class="min_img">
+                                                <figure class="figure">
+                                                    <img src="img/colaboradores.jpg" alt="" class="float-left figure-img img-fluid" width= "22%;" style="margin-right:20px; margin-top:15px;">
+                                                    <h4>Colaboradores da Forlogic participam do Dia do Desafio</h4>
+                                                    <p>
+                                                            Dia 31 de maio de 2017 foi o Dia do Desafio, ação 
+                                                            que tem como objetivo combater o sedentarismo. A…
+                                                    </p>
+                                                </figure>
+                                                
+                                        </a> 
+                                            <a href="" class="min_img">
+                                                    <figure class="figure">
+                                                        <img src="img/colaboradores.jpg" alt="" class="float-left figure-img img-fluid" width= "22%;" style="margin-right:20px; margin-top:15px;">
+                                                        <h4>Colaboradores da Forlogic participam do Dia do Desafio</h4>
+                                                        <p>
+                                                                Dia 31 de maio de 2017 foi o Dia do Desafio, ação 
+                                                                que tem como objetivo combater o sedentarismo. A…
+                                                        </p>
+                                                    </figure>
+                                                    
+                                            </a> 
+                           
+                         </div>
+                         <div class="col-lg-6">
+                                <a href="" class="min_img">
+                                        <figure class="figure">
+                                            <img src="img/colaboradores.jpg" alt="" class="float-left figure-img img-fluid" width= "22%;" style="margin-right:20px; margin-top:15px;">
+                                            <h4>Colaboradores da Forlogic participam do Dia do Desafio</h4>
+                                            <p>
+                                                    Dia 31 de maio de 2017 foi o Dia do Desafio, ação 
+                                                    que tem como objetivo combater o sedentarismo. A…
+                                            </p>
+                                        </figure>
+                                        
+                                    </a>  
+                                    <a href="" class="min_img">
+                                            <figure class="figure">
+                                                <img src="img/colaboradores.jpg" alt="" class="float-left figure-img img-fluid" width= "22%;" style="margin-right:20px; margin-top:15px;">
+                                                <h4>Colaboradores da Forlogic participam do Dia do Desafio</h4>
+                                                <p>
+                                                        Dia 31 de maio de 2017 foi o Dia do Desafio, ação 
+                                                        que tem como objetivo combater o sedentarismo. A…
+                                                </p>
+                                            </figure>
+                                            
+                                    </a> 
+                                        <a href="" class="min_img">
+                                                <figure class="figure">
+                                                    <img src="img/colaboradores.jpg" alt="" class="float-left figure-img img-fluid" width= "22%;" style="margin-right:20px; margin-top:15px;">
+                                                    <h4>Colaboradores da Forlogic participam do Dia do Desafio</h4>
+                                                    <p>
+                                                            Dia 31 de maio de 2017 foi o Dia do Desafio, ação 
+                                                            que tem como objetivo combater o sedentarismo. A…
+                                                    </p>
+                                                </figure>
+                                                
+                                         </a> 
+                                            <a href="" class="min_img">
+                                                    <figure class="figure">
+                                                        <img src="img/colaboradores.jpg" alt="" class="float-left figure-img img-fluid" width= "22%;" style="margin-right:20px; margin-top:15px;">
+                                                        <h4>Colaboradores da Forlogic participam do Dia do Desafio</h4>
+                                                        <p>
+                                                                Dia 31 de maio de 2017 foi o Dia do Desafio, ação 
+                                                                que tem como objetivo combater o sedentarismo. A…
+                                                        </p>
+                                                    </figure>
+                                                    
+                                            </a> 
+                                                <a href="" class="min_img">
+                                                        <figure class="figure">
+                                                            <img src="img/colaboradores.jpg" alt="" class="float-left figure-img img-fluid" width= "22%;" style="margin-right:20px; margin-top:15px;">
+                                                            <h4>Colaboradores da Forlogic participam do Dia do Desafio</h4>
+                                                            <p>
+                                                                    Dia 31 de maio de 2017 foi o Dia do Desafio, ação 
+                                                                    que tem como objetivo combater o sedentarismo. A…
+                                                            </p>
+                                                        </figure>
+                                                        
+                                                </a> 
+                         </div>
                      </div>
                      <div class="row">
-                        <a>
-                            <img src="img/colaboradores.jpg" alt="" class="figure-img img-fluid">
-                        </a>  
+                         <div class="col-lg-2" style="margin:0 auto; ">
+                                <nav aria-label="Page navigation example">
+                                        <ul class="pagination">
+                                          <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                              <span aria-hidden="true">&laquo;</span>
+                                              <span class="sr-only">Previous</span>
+                                            </a>
+                                          </li>
+                                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                          <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                              <span aria-hidden="true">&raquo;</span>
+                                              <span class="sr-only">Next</span>
+                                            </a>
+                                          </li>
+                                        </ul>
+                                      </nav>
+                         </div>
                      </div>
                 </div>
                
-        <footer>
-
+        <footer class="container-fluid">
+            <div class="row above">
+                    <div class="col-lg-5">
+                            <div class="adress-comp">
+                                    <div class="logo-footer">
+                                            <p><img src="img/LogoGrupo_Oficial-cinza.png" alt=""></p>
+                                    </div>
+                                <p>Rua Antônio Registro, 181 - Vila Seugling<br/>
+                                    Cornélio Procópio - Paraná<br/>
+                                    CEP 86.300-000
+                                </p>
+                                <p>Telefone: 43 3133-2200<br/>
+                                    E-mail: contato@forlogic.net
+                                </p>
+                            </div>
+                    </div>
+                    <div class="col-lg-7">
+                            <div class="gallery-ins">
+                                    <div><p>Instagram</p></div>
+                                    <div class="gallery">
+                                        <a href="" class="foto_1"><img src="img/foto_1.jpg" alt="foto instagram" ></a>
+                                        <a href="" class="foto_2"><img src="img/foto_2.jpg" alt="foto instagram"></a>
+                                        <a href="" class="foto_3"><img src="img/foto_3.jpg" alt="foto instagram"></a>
+                                        <a href="" class="foto_4"><img src="img/foto_4.jpg" alt="foto instagram"></a>
+                                    </div>
+                            </div>
+                    </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 bellow">
+                    <p>© Grupo Forlogic Software 2017</p>
+                </div>
+                    
+            </div>
+                
         </footer>
             
 </body>
