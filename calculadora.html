@@ -93,66 +93,69 @@
        
     </div>
     <script>
-         var result = document.getElementById("res");
-     function numberDigited(n){
-        
-        result.innerHTML += n;
-           
-     }
-     function typeEqual(){
-        if(/^[0-9]{1,}\s?[*+-/]{1}\s?[0-9]{1,}/.test(result.innerHTML)){
-           var arrNum = result.innerHTML.split(/[*-/+]/);
-           var arrOp = result.innerHTML.split(/[0-9]{1,}/);
-           let x = 0;
-           let res = 0;
-           for(let i = 0; i < arrOp.length; i++){
-                
-               if(arrOp[i] == '*'){
-                   x = parseInt(arrNum[i-1])*parseInt(arrNum[i]);
-                  res = ordened(x,i-1,arrNum,arrOp);
-
-               } 
-             
-               if(arrOp[i] == '/'){
-                  x = parseInt(arrNum[i-1])/parseInt(arrNum[i]);
-                   //buble
-                   res = ordened(x,i-1,arrNum,arrOp);
-                   //
-              
-               }
-           }
-           for(let i = 0; i < arrOp.length; i++){
-            if(arrOp[i] == '-'){
-                   x = parseInt(arrNum[i-1])-parseInt(arrNum[i]);
-                   res = ordened(x,i-1,arrNum,arrOp);
-                   
-
-               } 
-               if(arrOp[i] == '+'){
-                   x = parseInt(arrNum[i-1])+parseInt(arrNum[i]);
-                   res = ordened(x,i-1,arrNum,arrOp);
-                  
-               } 
-           }
-           result.innerHTML = res;
-           console.log(x);
-           console.log({arrNum});
-           console.log({arrOp});
-        } else{
-            alert("Entrada invalida");
-            result.innerHTML = "";
+        var result = document.getElementById("res");
+        function numberDigited(n){
+            
+            (n === "AC")?result.innerHTML = "": result.innerHTML += n;    
         }
-     }
-     //var r = document.getElementById("res");
-     function ordened(x,p,arrNum,arrOp){
+        function typeEqual(){
+            if(/^[0-9]{1,}\s?[*+-/]{1}\s?[0-9]{1,}/.test(result.innerHTML)){
+                var arrNum = result.innerHTML.split(/[*-/+]/);
+                var arrOp = result.innerHTML.split(/[0-9]{1,}/);
+                let x = 0;
+                let res = 0;
+                for(let i = 1; i < arrOp.length; i++){
+                    
+                    if(arrOp[i] == '*'){
+                        x = parseInt(arrNum[i-1])*parseInt(arrNum[i]);
+                        res = ordened(x,i-1,arrNum,arrOp);
+                        if(res.length === 1) break;
+                        i = 0;  
+                    } 
+                    if(arrOp[i] == '/'){
+                        x = parseInt(arrNum[i-1])/parseInt(arrNum[i]);
+                        //buble
+                        res = ordened(x,i-1,arrNum,arrOp);
+                        if(res.length === 1) break;
+                        i = 0;
+                    
+                    }
+                }
+                for(let i = 1; i < arrOp.length; i++){
+                    if(arrOp[i] == '-'){
+                        x = parseInt(arrNum[i-1])-parseInt(arrNum[i]);
+                        res = ordened(x,i-1,arrNum,arrOp);
+                        if(res.length === 1) break;
+                        i = 0;
+
+                     } 
+                    if(arrOp[i] == '+'){
+                        x = parseInt(arrNum[i-1])+parseInt(arrNum[i]);
+                        res = ordened(x,i-1,arrNum,arrOp);
+                        if(res.length === 1) break;
+                        i = 0;
+                        
+                    } 
+                }
+                result.innerHTML = res[0];
+                console.log(x);
+                console.log({arrNum});
+                console.log({arrOp});
+            } else{
+                alert("Entrada invalida");
+                result.innerHTML = "";
+            }
+        }
+        //var r = document.getElementById("res");
+        function ordened(x,p,arrNum,arrOp){
         
-         console.log(arrNum);
-         console.log(arrOp);
+            console.log(arrNum);
+            console.log(arrOp);
         // var arr = [1,2,3,4,5,6];
-         //var x = 8;
-        arrNum[p] = x;
+            //var x = 8;
+        arrNum[p] = x; // x = resultado da operação
         p++;
-        let r = p;
+        let r = p; //p=1
         console.log(p);
         for(; p < arrNum.length; p++){
             arrNum[p] = arrNum[p+1];
@@ -163,8 +166,8 @@
             arrOp[r] = arrOp[r+1];
             console.log(arrOp[r]);
         }
-        return arrNum[0];
-     }
+        return arrNum;
+        }
     </script>
 </body>
 </html>
