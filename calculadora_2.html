@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+        }
+        .container{
+            display:table;
+            
+            width: 20%;
+            padding: 0px 0 0 0;
+            margin: 0 auto;
+            margin-top: 100px;
+            background-color: lightblue;  
+        }
+        .result{
+            width: 99.3%;
+            border: 1px solid transparent;
+            display: table-caption;
+            background-color: rgb(1, 100, 133); 
+            color: white;
+            margin-bottom:10px;
+            box-shadow:  0px 1px 1px 0px rgba(0,0,0,.4);
+            height: 70px;
+        }
+       
+        .result p{
+            float: right;
+            margin-right: 20px;
+            font-family: "Open Sans Regular";
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+        .equal, .ac, .solidus, .mult, .minus, .plus{
+            display: table-cell;
+          
+            text-align: center;
+            width: 10%;
+            background-color: rgba(0,0,0,.4);
+            color: white;
+            font-size: 19px;
+            box-shadow:  1px 1px 1px 1px rgba(0,0,0,.4);
+        }
+        .digit{
+            display: table-cell;
+            text-align: center;
+            width: 10%;
+            background-color: rgba(0, 0, 0, 0.219);
+            color: white;
+            font-size: 19px;
+            box-shadow:  1px 1px 1px 1px rgba(0,0,0,.4);
+        }
+        [class*="row-"]{
+            display: table-row;
+        }
+        span{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .h:hover{
+            background-color: aquamarine;
+            cursor: pointer;
+        }
+        .h:active{
+            background-color:aqua;
+            box-shadow:  inset 1px 1px 1px 1px rgba(0,0,0,.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="result" ><p id="res"></p></div>
+        <div class="row-1">
+            <div class="digit h" onclick="typeSquare()"><span>x²</span></div>
+            <div class="digit h" onclick="typeSquareRoot()"><span>&#x221A;</span></div>
+            <div class="digit h" onclick="numberDigited('&#x25;')"><span>&#x25;</span></div>
+            <div class="solidus h" onclick="numberDigited('&#x2F;')"><span>&#x2F;</span></div>
+        </div>
+        <div class="row-2">
+                <div class="digit h" onclick="numberDigited(7)"><span>&#x37;</span></div>
+                <div class="digit h" onclick="numberDigited(8)"><span>&#x38;</span></div>
+                <div class="digit h" onclick="numberDigited(9)"><span>&#x39;</span></div>
+                <div class="mult h" onclick="numberDigited('&#x2A;')"><span>&#x2A;</span></div>
+            </div>
+        <div class="row-3">
+                <div class="digit h" onclick="numberDigited(4)"><span>&#x34;</span></div>
+                <div class="digit h" onclick="numberDigited(5)"><span>&#x35;</span></div>
+                <div class="digit h" onclick="numberDigited(6)"><span>&#x36;</span></div>
+                <div class="minus h" onclick="numberDigited('&#x2D;')"><span>&#x2D;</span></div>
+            </div>
+        <div class="row-4">
+                <div class="digit h" onclick="numberDigited(1)"><span>&#x31;</span></div>
+                <div class="digit h" onclick="numberDigited(2)"><span>&#x32;</span></div>
+                <div class="digit h" onclick="numberDigited(3)"><span>&#x33;</span></div>
+                <div class="plus h" onclick="numberDigited('&#x2B;')"><span>&#x2B;</span></div>
+        </div>
+        <div class="row-5">
+                <div class="equal h" onclick="typeEqual()"><span>&#x3D;</span></div>
+                <div class="digit h" onclick="numberDigited(0)"><span>&#x30;</span></div>
+                <div class="ac h" onclick="numberDigited('&#x41;&#x43;')"><span>&#x41;&#x43;</span></div>
+                <div class="solidus h" onclick="numberDigited('&#x2E;')"><span>&#x2E;</span></div>
+        </div>
+    </div>
+    <script>
+        var result = document.getElementById("res");
+        function typeSquare(){
+            (result.innerHTML != 0)? result.innerHTML = Math.pow(parseInt(result.innerHTML),2):result.innerHTML = '&#x263B; porra neh';
+        }
+        function typeSquareRoot(){
+            (result.innerHTML > 0)? result.innerHTML = Math.sqrt(parseInt(result.innerHTML)): result.innerHTML = "&#x2620;";
+        }
+        function numberDigited(n){
+            
+            (n === "AC")?result.innerHTML = "": result.innerHTML += n;    
+        }
+        function typeEqual(){
+            debugger;
+            if(/^[0-9]+(\.[0-9])?[*+-/]{1}[0-9]+(\.[0-9])?/.test(result.innerHTML)){
+                var arrNum = result.innerHTML.split(/[*/+-]/g);
+                console.log({arrNum});
+                var arrOp = result.innerHTML.split(/[0-9]\.?[0-9]*/);
+                console.log({arrOp});
+                let x = 0;
+                let res = 0;
+                for(let i = 1; i < arrOp.length; i++){
+                    
+                    if(arrOp[i] == '*'){
+                        x = parseFloat(arrNum[i-1])*parseFloat(arrNum[i]);
+                        res = ordened(x,i-1,arrNum,arrOp);
+                        if(res.length === 1) break;
+                        i = 0;  
+                    } 
+                    if(arrOp[i] == '/'){
+                        x = parseFloat(arrNum[i-1])/parseFloat(arrNum[i]);
+                        //buble
+                        res = ordened(x,i-1,arrNum,arrOp);
+                        if(res.length === 1) break;
+                        i = 0;
+                    
+                    }
+                }
+                for(let i = 1; i < arrOp.length; i++){
+                    if(arrOp[i] == '-'){
+                        x = parseFloat(arrNum[i-1])-parseFloat(arrNum[i]);
+                        res = ordened(x,i-1,arrNum,arrOp);
+                        if(res.length === 1) break;
+                        i = 0;
+
+                     } 
+                    if(arrOp[i] == '+'){
+                        x = parseFloat(arrNum[i-1])+parseFloat(arrNum[i]);
+                        res = ordened(x,i-1,arrNum,arrOp);
+                        if(res.length === 1) break;
+                        i = 0;   
+                    } 
+                }
+                result.innerHTML = res[0];
+                console.log(res[0]);
+                console.log({arrNum});
+                console.log({arrOp});
+            } else{
+                alert("Entrada invalida");
+                result.innerHTML = "";
+            }
+        }
+        //var r = document.getElementById("res");
+        function ordened(x,p,arrNum,arrOp){
+        
+            console.log(arrNum);
+            console.log(arrOp);
+        // var arr = [1,2,3,4,5,6];
+            //var x = 8;
+            arrNum[p] = x; // x = resultado da operação
+            p++;
+            let r = p; //p=1
+            console.log(p);
+            for(; p < arrNum.length; p++){
+                arrNum[p] = arrNum[p+1];
+                console.log(arrNum[p]);
+            }
+            console.log(r);
+            for(; r < arrNum.length; r++){
+                arrOp[r] = arrOp[r+1];
+                console.log(arrOp[r]);
+            }
+            return arrNum;
+        }
+    </script>
+</body>
+</html>
