@@ -6,13 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        body{
-            background-color: cornflowerblue;
-        }
+     
         .container{
             display:table;
-            
-            width: 20%;
+            border: 2px solid lightblue;
+            width: 21%;
             padding: 0px 0 0 0;
             margin: 0 auto;
             margin-top: 100px;
@@ -22,38 +20,30 @@
             width: 99.3%;
             border: 1px solid transparent;
             display: table-caption;
-            background-color: rgb(1, 100, 133); 
+            background-color: rgb(4, 100, 133); 
             color: white;
             margin-bottom:10px;
             box-shadow:  0px 1px 1px 0px rgba(0,0,0,.4);
-            height: 70px;
+            height: 120px;
         }
        
         .result p{
             float: right;
             margin-right: 20px;
             font-family: "Open Sans Regular";
-            font-size: 20px;
+            font-size: 25px;
             text-transform: uppercase;
         }
-        .equal, .ac, .solidus, .mult, .minus, .plus{
+        .digit, .equal, .ac, .solidus, .mult, .minus, .plus{
             display: table-cell;
-          
+            border: 0.5px solid transparent;
             text-align: center;
-            width: 10%;
+            width: 15%;
             background-color: rgba(0,0,0,.4);
             color: white;
             font-size: 19px;
             box-shadow:  1px 1px 1px 1px rgba(0,0,0,.4);
-        }
-        .digit{
-            display: table-cell;
-            text-align: center;
-            width: 10%;
-            background-color: rgba(0, 0, 0, 0.219);
-            color: white;
-            font-size: 19px;
-            box-shadow:  1px 1px 1px 1px rgba(0,0,0,.4);
+            border-radius: 4px;
         }
         [class*="row-"]{
             display: table-row;
@@ -62,8 +52,9 @@
             display:flex;
             justify-content: center;
             align-items: center;
-            padding-top: 20px;
-            padding-bottom: 20px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            font-size: 25px;
         }
         .h:hover{
             background-color: aquamarine;
@@ -81,7 +72,7 @@
         <div class="row-1">
             <div class="digit h" onclick="typeSquare()"><span>x²</span></div>
             <div class="digit h" onclick="typeSquareRoot()"><span>&#x221A;</span></div>
-            <div class="digit h" onclick="numberDigited('&#x25;')"><span>&#x25;</span></div>
+            <div class="digit h" onclick="typeArrow()"><span>&#x261A;</span></div>
             <div class="solidus h" onclick="numberDigited('&#x2F;')"><span>&#x2F;</span></div>
         </div>
         <div class="row-2">
@@ -112,67 +103,58 @@
     <script>
         var result = document.getElementById("res");
         function typeSquare(){
-            (result.innerHTML != 0)? result.innerHTML = Math.pow(parseInt(result.innerHTML),2):result.innerHTML = '&#x263B; porra neh';
+            if(inputValidation() || /^[\d]+(\.[\d]+)?$/g.test(result.innerHTML)){
+                if(isNaN(result.innerHTML)){
+                    result.innerHTML = Math.pow(parseFloat(calculadora()),2);
+                    console.log(result.innerHTML);
+                } else if(!isNaN(result.innerHTML) && result.innerHTML != 0){
+                
+                    result.innerHTML = Math.pow(parseFloat(result.innerHTML),2);
+                    console.log(result.innerHTML);
+                } else {
+                    result.innerHTML = '&#x263B; vc sabe';
+                }
+            } else {
+                alert("Entrada inválida");
+                result.innerHTML = "";
+            }
+            //(result.innerHTML != 0)? result.innerHTML = Math.pow(parseFloat(typeEqual()),2):result.innerHTML = '&#x263B; porra neh';
         }
         function typeSquareRoot(){
-            (result.innerHTML > 0)? result.innerHTML = Math.sqrt(parseInt(result.innerHTML)): result.innerHTML = "&#x2620;";
+            if(inputValidation() || /[\d]+(\.[\d]+)?$/.test(result.innerHTML)){
+                if(isNaN(result.innerHTML)){
+                    result.innerHTML = Math.sqrt(parseFloat(calculadora()));
+                    console.log(result.innerHTML);
+                } else if(!isNaN(result.innerHTML) && result.innerHTML >= 0){
+                    result.innerHTML = Math.sqrt(parseFloat(result.innerHTML));
+                    console.log(result.innerHTML);
+                } else {
+                    result.innerHTML = '&#x2620;';
+                }
+            } else {
+                alert("Entrada inválida");
+                result.innerHTML = "";
+            }
+            //(result.innerHTML < 0)? result.innerHTML = Math.sqrt(parseFloat(typeEqual())): result.innerHTML = "&#x2620;";
         }
         function numberDigited(n){
             
             (n === "AC")?result.innerHTML = "": result.innerHTML += n;    
         }
+        function typeArrow(){
+            var arrExp = result.innerHTML.split("");
+            console.log(result.innerHTML);
+            console.log({arrExp});
+            arrExp[arrExp.length-1] = "";
+            result.innerHTML = arrExp.join("");
+            console.log(result.innerHTML);
+            console.log({arrExp});
+        }
         function typeEqual(){
-           
-            if(/^[0-9]+(\.[0-9])?[*+-/]{1}[0-9]+(\.[0-9])?/.test(result.innerHTML)){
-                var arrNum = result.innerHTML.split(/[*/+-]/g);
-                console.log({arrNum});
-                var arrOp = result.innerHTML.split(/[0-9]\.?[0-9]*/);
-                console.log({arrOp});
-                let x = 0;
-                let res = 0;
-                for(let i = 1; i < arrOp.length; i++){
-                    
-                    if(arrOp[i] == '*'){
-                        x = parseFloat(arrNum[i-1])*parseFloat(arrNum[i]);
-                        res = ordened(x,i-1,arrNum,arrOp);
-                        if(res.length === 1) break;
-                        i = 0;  
-                    } 
-                    if(arrOp[i] == '/'){
-                        x = parseFloat(arrNum[i-1])/parseFloat(arrNum[i]);
-                        //buble
-                        res = ordened(x,i-1,arrNum,arrOp);
-                        if(res.length === 1) break;
-                        i = 0;
-                    
-                    }
-                }
-                for(let i = 1; i < arrOp.length; i++){
-                    if(arrOp[i] == '-'){
-                        x = parseFloat(arrNum[i-1])-parseFloat(arrNum[i]);
-                        res = ordened(x,i-1,arrNum,arrOp);
-                        if(res.length === 1) break;
-                        i = 0;
-
-                     } 
-                    if(arrOp[i] == '+'){
-                        x = parseFloat(arrNum[i-1])+parseFloat(arrNum[i]);
-                        res = ordened(x,i-1,arrNum,arrOp);
-                        if(res.length === 1) break;
-                        i = 0;   
-                    } 
-                }
-                result.innerHTML = res[0];
-                console.log(res[0]);
-                console.log({arrNum});
-                console.log({arrOp});
-            } else{
-                alert("Entrada invalida");
-                result.innerHTML = "";
-            }
+           result.innerHTML = calculadora(); 
         }
         //var r = document.getElementById("res");
-        function ordened(x,p,arrNum,arrOp){
+        function spliced(x,p,arrNum,arrOp){
         
             console.log(arrNum);
             console.log(arrOp);
@@ -192,6 +174,59 @@
                 console.log(arrOp[r]);
             }
             return arrNum;
+        }
+        function calculadora(){
+            if(inputValidation()){
+                var arrNum = result.innerHTML.split(/[*/+-]/g);
+                console.log({arrNum});
+                var arrOp = result.innerHTML.split(/[0-9]+\.[0-9]+|[0-9]+/g);
+                console.log({arrOp});
+                let x = 0;
+                let res = 0;
+                for(let i = 1; i < arrOp.length; i++){
+                    
+                    if(arrOp[i] == '*'){
+                        x = parseFloat(arrNum[i-1])*parseFloat(arrNum[i]);
+                        res = spliced(x,i-1,arrNum,arrOp);
+                        if(res.length === 1) break;
+                        i = 0;  
+                    } 
+                    if(arrOp[i] == '/'){
+                        x = parseFloat(arrNum[i-1])/parseFloat(arrNum[i]);
+                        //buble
+                        res = spliced(x,i-1,arrNum,arrOp);
+                        if(res.length === 1) break;
+                        i = 0;
+                    
+                    }
+                }
+                for(let i = 1; i < arrOp.length; i++){
+                    if(arrOp[i] == '-'){
+                        x = parseFloat(arrNum[i-1])-parseFloat(arrNum[i]);
+                        res = spliced(x,i-1,arrNum,arrOp);
+                        if(res.length === 1) break;
+                        i = 0;
+
+                     } 
+                    if(arrOp[i] == '+'){
+                        x = parseFloat(arrNum[i-1])+parseFloat(arrNum[i]);
+                        res = spliced(x,i-1,arrNum,arrOp);
+                        if(res.length === 1) break;
+                        i = 0;   
+                    } 
+                }
+                //result.innerHTML = res[0];
+                console.log(res[0]);
+                console.log({arrNum});
+                console.log({arrOp});
+                return res[0];
+            } else{
+                alert("Entrada invalida");
+                return "";
+            }
+        }
+        function inputValidation(){
+            return /^[0-9]+(\.[0-9])?[*+-/]{1}[0-9]+(\.[0-9])?/g.test(result.innerHTML);
         }
     </script>
 </body>
