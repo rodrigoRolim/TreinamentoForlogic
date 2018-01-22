@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        .navbar-nav a{
+            display: inline;
+        }
+        .lista-contatos{
+            width: 100%;
+            text-align: center;
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        h1{
+            margin-bottom: 30px;
+            color: gray;
+        }
+      
+        #ed{
+            border: 1px solid transparent;
+            background-color: blue;
+            color: white;
+            padding:3px 5px;
+            font-size: 12px;
+            border-radius: 2px;
+        }
+        #ex{
+            border: 1px solid transparent;
+            background-color: red;
+            color: white;
+            padding:3px 5px;
+            font-size: 12px;
+            border-radius: 2px;
+        }
+        .fa{
+            margin-right: 5px;
+        }
+        .table:hover{
+            cursor: pointer;
+        }
+
+        #info{
+            width:100%;
+           
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Agenda</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="#">Cadastrar Contatos <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="#">Ver a Agenda</a>
+                </div>
+            </div>
+     </nav>
+    <div class="container">
+        <div class="lista-contatos">
+                <div><h1>Contatos</h1></div>
+            <table class="table table-hover">
+                   
+                    <thead>
+                        
+                    </thead>
+                    <tbody>
+                        <tr onclick="document.getElementById('info').style.display='inline-block';">
+                            <th scope="row" style="text-align:left">
+                                <a href=""><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                                <a href=""><i class="fa fa-eye" aria-hidden="true"></i></a>
+                            </th>
+                            <td style="text-align:center">rodrigo rolim veras</td>
+                            <td style="text-align:right">
+                                <a href="#1" class="bt-edex" id="ed"><i class="fa fa-pencil" aria-hidden="true"></i>editar</a>
+                                <a href="#2" class="bt-edex" id="ex"><i class="fa fa-trash-o" aria-hidden="true"></i>excluir</a>
+                            </td>
+                        </tr>
+                        <tr >
+                             
+                            <td style="text-align:left">
+                                <div>
+                                    <p><span>Nome:</span><span> rodrigo</span></p>
+                                    <p><span>Email:</span><span> rodrigorolimveras92@gmail.com</span></p>
+                                    <p><span>Sexo:</span><span> feminino</span></p>
+                                    <p><span>Rua:</span><span> rua paulo costa pereira</span></p>
+                                    <p><span>Nº</span><span> 469</span></p>
+
+                                </div>
+                            </td>
+                        <td>sadas</td>
+                        <td>dasd</td>
+                            
+                        </tr>
+                        <tr>
+                            <th scope="row" style="text-align:left">
+                                <a href=""><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                                <a href=""><i class="fa fa-eye" aria-hidden="true"></i></a>
+                            </th>
+                            <td style="text-align:center">rodrigo rolim veras</td>
+                            <td style="text-align:right">
+                                <a href="#1" class="bt-edex" id="ed"><i class="fa fa-pencil" aria-hidden="true"></i>editar</a>
+                                <a href="#2" class="bt-edex" id="ex"><i class="fa fa-trash-o" aria-hidden="true"></i>excluir</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" style="text-align:left">
+                                <a href=""><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                                <a href=""><i class="fa fa-eye" aria-hidden="true"></i></a>
+                            </th>
+                            <td style="text-align:center">rodrigo rolim veras</td>
+                            <td style="text-align:right">
+                                <a href="#1" class="bt-edex" id="ed"><i class="fa fa-pencil" aria-hidden="true"></i>editar</a>
+                                <a href="#2" class="bt-edex" id="ex"><i class="fa fa-trash-o" aria-hidden="true"></i>excluir</a>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+        </div>
+       
+    </div>
+    <script>
+        var linha = document.getElementById("row");
+        
+    </script>
+</body>
+</html>
