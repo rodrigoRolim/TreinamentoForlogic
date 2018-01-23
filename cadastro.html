@@ -10,16 +10,23 @@
     <title>Document</title>
     <style>
         form{
-            margin: 100px auto;
+            margin: 50px auto;
         }
         .container{
-            width:40%;
+            width:50%;
         }
         .radio{
             margin-bottom: 20px;
         }
         #lb-sexo{
             font-weight: bold;
+        }
+        footer{
+            background-color: black;
+            color: white;
+            text-align:center;
+            padding:5px;
+            margin:0;
         }
     </style>
 </head>
@@ -37,38 +44,95 @@
         </div>
     </nav>
     <div class="container">
-            <form>
+            <form method="post">
                 <div class="form-column align-items-center">
-                    <div class="form-group">
-                        <label class="sr-only" for="inlineFormInput">Name</label>
-                        <input type="text" class="form-control mb-10 my-2" id="inlineFormInput" placeholder="Jane Doe">
-                    </div>
-                    <div class="form-group">
-                        <label class="sr-only" for="inlineFormInputGroup">Username</label>
-                        <div class="input-group mb-2">
-                            <div class="input-group-prepend">
-                            <div class="input-group-text">@</div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label  for="name">Name</label>
+                                <input type="text" class="form-control mb-10 my-2" id="name" name="name" placeholder="Jane Doe">
                             </div>
-                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
                         </div>
                     </div>
-                    <div class="radio">
-                        <label id="lb-sexo">Sexo</label>
-                        <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadio1">feminino</label>
-                        </div>
-                        <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadio2">masculino</label>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label  for="email">Email</label>
+                                <div class="input-group mb-2">
+                                    <div class="input-group-prepend">
+                                    <div class="input-group-text">@</div>
+                                    </div>
+                                    <input type="text" class="form-control" id="email" name="email" placeholder="Username">
+                                </div>
+                            </div>
                         </div>
                     </div>
                    
+                   
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="form-group">
+                                <label for="rua">Rua</label>
+                                <input type="text" class="form-control" id="rua" name="rua">
+                            </div>
+                        </div>
+                       <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="numero">Nº</label>
+                                <input type="text" class="form-control" id="numero" name="numero">
+                            </div>
+                       </div>
+                        
+                    </div>
+                   
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="form-group">
+                                <label for="bairro">Bairro</label>
+                                <input type="text" class="form-control" id="bairro" name="bairro">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="complemento">Complemento</label>
+                                <input type="text" class="form-control" id="complemento" name="complemento">
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="">Observação</label>
+                                <textarea class="form-control" aria-label="With textarea" id="observacao" name="observacao" style="resize:none"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-lg-12">
+                                <div class="radio">
+                                    <label id="lb-sexo">Sexo</label>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="sexo" name="sexo" class="custom-control-input">
+                                        <label class="custom-control-label" for="sexo">feminino</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadio2">masculino</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                        <button type="submit" class="btn btn-primary btn-lg" onclick="alert($POST['name']);">Submit</button>
                     </div>
                 </div>
-                </form>
+            </form>
     </div>
+    <script>
+    </script>
+    <footer>
+        <p>Agenda</p>
+    </footer>
 </body>
 </html>
