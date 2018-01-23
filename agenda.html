@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src=https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js></script>
     <link rel="stylesheet" href="../font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
     <title>Document</title>
     <style>
@@ -46,9 +47,8 @@
             cursor: pointer;
         }
 
-        #info{
+        #infor{
             width:100%;
-           
             display: none;
         }
         
@@ -76,7 +76,7 @@
                         
                     </thead>
                     <tbody>
-                        <tr onclick="document.getElementById('info').style.display='inline-block';">
+                        <tr id="row">
                             <th scope="row" style="text-align:left">
                                 <a href=""><i class="fa fa-star-o" aria-hidden="true"></i></a>
                                 <a href=""><i class="fa fa-eye" aria-hidden="true"></i></a>
@@ -87,7 +87,7 @@
                                 <a href="#2" class="bt-edex" id="ex"><i class="fa fa-trash-o" aria-hidden="true"></i>excluir</a>
                             </td>
                         </tr>
-                        <tr >
+                        <tr id="infor">
                              
                             <td style="text-align:left">
                                 <div>
@@ -99,8 +99,8 @@
 
                                 </div>
                             </td>
-                        <td>sadas</td>
-                        <td>dasd</td>
+                        <td></td>
+                        <td></td>
                             
                         </tr>
                         <tr>
@@ -131,9 +131,6 @@
         </div>
        
     </div>
-    <script>
-        var linha = document.getElementById("row");
-        
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
