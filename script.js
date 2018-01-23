@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    var enviando_formulario = false;
     $("#row").click(function(){
         if($("#infor").css("display") == 'none'){
             $("#infor").css("display","table-row");
@@ -6,29 +7,79 @@ $(document).ready(function(){
             $("#infor").css("display","none");
         }
     });
-    let attchValues = ()=>{
-        $("input[type='submit']").click(function(){
-            $("")
-        });
-    }
-    $("input[type='submit']").click(function(){
-        $.ajax({
-            type: "POST",
-            url: 'contacts.db',
-            data: {
-                name: $("#name").val(),
-                email: $("#email").val(),
-                rua:$("#rua").val(),
-                numero:$("#numero").val(),
-                bairro:$("#bairro").val(),
-                complemento:$("#complemento").val(),
-                observacao:$("#observacao").val(),
-                sexo:$("#sexo").val()
-            },
-            success: alert("deu certo"),
-            dataType: 'json',
-            error: alert("erooou")
-        });
+  
+    $("form").submit(function(e){
+        //debugger;
+        e.preventDefault();
+        //var form = $("#formulario").serialize();
+        //var str1 = form.replace(/([=&])/g,",");
+       // var str2 = str1.split(",");
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var rua = $("#rua").val();
+        var numero = $("#numero").val();
+        var bairro = $("#bairro").val();
+        var complemento = $("#complemento").val();
+        var observacao = $("#observacao").val();
+        var sexo = $("#sexo").val();
+        var dados = {
+            'name':name,
+            'email':email,
+            'rua':rua,
+            'numero':numero,
+            'bairro':bairro,
+            'complemento':complemento,
+            'observacao':observacao,
+            'sexo':sexo       
+         };
+         dados = JSON.stringify(dados);
+         console.log({dados});
+        //console.log({str1});
+       // console.log({str2});
+        //var arr = [];
+       // for(let i = 0; i < str2.length; i++){
+           // arr[i] = {str2[i] : str2[i+1]};
+       // }
+       // console.log({arr});
+        var submit_btn = $("button");
+        var submit_text = submit_btn.val();
+        //var dados = new FormData(obj);
+        //console.log({dados});
+        //var name = $("#name").val();
+      //  var email = $("#email").val();
+        //var rua = $("#rua").val();
+        //var numero = $("#numero").val();
+        //var bairro = $("#bairro").val();
+       // var complemento = $("#complemento").val();
+       // var observacao = $("#observacao").val();
+        //var sexo = $("#sexo").val();
+       // var formData = {'name':name,'email':email,'rua':rua,'numero':numero,'bairro':bairro,'complemento':complemento,'observacao':observacao,'sexo':sexo};
+        function  volta_submit(){
+            submit_btn.removeAttr('disabled');
+            submit_btn.val(submit_text);
+            enviando_formulario = false;
+        }
+        if(!enviando_formulario){
+            $.ajax({
+              
+                type: "POST",
+                url: 'http://localhost:3000/v1/contacts',
+                data: dados,
+
+                success: function(data){
+                    if(data === 'OK'){
+                        alert('dados enviados com sucesso');
+                    } else {
+                        alert('não foi');
+                        console.log({data});
+                    }
+                },
+                error: function(request,status,error){
+                    alert(request.responseText);
+                }
+            });
+       }
+       return false;
     });
 
 });
