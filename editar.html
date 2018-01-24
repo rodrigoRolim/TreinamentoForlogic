@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Agenda</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link" href="cadastro.html">Cadastrar Contatos <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" href="agenda.html">Ver a Agenda</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="container">
+                    <form method="get" id="formulario">
+                        <div class="form-column align-items-center">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label  for="name">Name</label>
+                                        <input type="text" class="form-control mb-10 my-2" id="name" name="name-ed" placeholder="Jane Doe" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label  for="email">Email</label>
+                                        <div class="input-group mb-2">
+                                            <div class="input-group-prepend">
+                                            <div class="input-group-text">@</div>
+                                            </div>
+                                            <input type="text" class="form-control" id="email" name="email-ed" placeholder="Username" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="form-group">
+                                        <label for="rua">Rua</label>
+                                        <input type="text" class="form-control" id="rua" name="rua-ed">
+                                    </div>
+                                </div>
+                               <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="numero">Nº</label>
+                                        <input type="text" class="form-control" id="numero" name="numero-ed">
+                                    </div>
+                               </div>
+                                
+                            </div>
+                           
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="form-group">
+                                        <label for="bairro">Bairro</label>
+                                        <input type="text" class="form-control" id="bairro" name="bairro-ed">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="complemento">Complemento</label>
+                                        <input type="text" class="form-control" id="complemento" name="complemento-ed">
+                                    </div>
+                                </div>
+                            </div>
+                           <div class="row">
+                               <div class="col-lg-6">
+                                   <div class="form-group">
+                                       <label for="">Cidade</label>
+                                   </div>
+                               </div>
+                           </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label for="">Observação</label>
+                                        <textarea class="form-control" aria-label="With textarea" id="observacao" name="observacao" style="resize:none"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="radio">
+                                            <label id="lb-sexo">Sexo</label>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="feminino" name="sexo" value="feminino" class="custom-control-input">
+                                                <label class="custom-control-label" for="feminino">feminino</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="masculino" name="sexo" value="masculino" class="custom-control-input">
+                                                <label class="custom-control-label" for="masculino">masculino</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+</body>
+</html>

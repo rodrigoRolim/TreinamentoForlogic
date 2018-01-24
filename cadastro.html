@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
    <!-- <link rel="stylesheet" href="../font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">-->
     <title>Document</title>
     <style>
@@ -29,6 +30,7 @@
             padding:5px;
             margin:0;
         }
+        
     </style>
 </head>
 <body>
@@ -45,13 +47,13 @@
         </div>
     </nav>
     <div class="container">
-            <form method="post" id="formulario">
+            <form method="get" id="formulario">
                 <div class="form-column align-items-center">
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label  for="name">Name</label>
-                                <input type="text" class="form-control mb-10 my-2" id="name" name="name" placeholder="Jane Doe">
+                                <input type="text" class="form-control mb-10 my-2" id="name" name="name" placeholder="Jane Doe" required>
                             </div>
                         </div>
                     </div>
@@ -63,13 +65,11 @@
                                     <div class="input-group-prepend">
                                     <div class="input-group-text">@</div>
                                     </div>
-                                    <input type="text" class="form-control" id="email" name="email" placeholder="Username">
+                                    <input type="text" class="form-control" id="email" name="email" placeholder="Username" required>
                                 </div>
                             </div>
                         </div>
                     </div>
-                   
-                   
                     <div class="row">
                         <div class="col-lg-8">
                             <div class="form-group">
@@ -100,7 +100,13 @@
                             </div>
                         </div>
                     </div>
-                   
+                   <div class="row">
+                       <div class="col-lg-6">
+                           <div class="form-group">
+                               <label for="">Cidade</label>
+                           </div>
+                       </div>
+                   </div>
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="form-group">
@@ -114,12 +120,12 @@
                                 <div class="radio">
                                     <label id="lb-sexo">Sexo</label>
                                     <div class="custom-control custom-radio">
-                                        <input type="radio" id="sexo" name="sexo" class="custom-control-input">
-                                        <label class="custom-control-label" for="sexo">feminino</label>
+                                        <input type="radio" id="feminino" name="sexo" value="feminino" class="custom-control-input">
+                                        <label class="custom-control-label" for="feminino">feminino</label>
                                     </div>
                                     <div class="custom-control custom-radio">
-                                        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                                        <label class="custom-control-label" for="customRadio2">masculino</label>
+                                        <input type="radio" id="masculino" name="sexo" value="masculino" class="custom-control-input">
+                                        <label class="custom-control-label" for="masculino">masculino</label>
                                     </div>
                                 </div>
                             </div>
