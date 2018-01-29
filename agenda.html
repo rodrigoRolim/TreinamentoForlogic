@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +8,25 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src=https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js></script>
     <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+<<<<<<< HEAD
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
     <title>Document</title>
     <style>
+        .table{
+            box-shadow: 1px 6px 6px 1px rgba(0,0,0,.08);
+           
+        }
+        .lista{
+            height: 500px;
+            overflow: auto;
+        }
+=======
+    <title>Document</title>
+    <style>
+>>>>>>> 9d5f7fd51126bea8c655c5e287dec47468a0a870
         .navbar-nav a{
             display: inline;
         }
@@ -51,12 +68,153 @@
             width:100%;
             display: none;
         }
+<<<<<<< HEAD
+        [class*="fa-star"]{
+            color: rgb(255, 196, 0);
+        }
+      
+        [id*="row-"]{
+            border-left: 5px solid rgb(7, 224, 159);
+            border-right: 5px solid rgb(7, 224, 159);
+        }
+        .contato:hover,[id*="ex-"],[id*="ed-"]{
+            cursor: pointer;
+        }
+        .fa-exclamation{
+            color: red;
+        }
+        .pet{
+            padding-top: 50px;
+        }
+        .fa-check-circle-o{
+            color:aqua;
+        }
+=======
         
+>>>>>>> 9d5f7fd51126bea8c655c5e287dec47468a0a870
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">Agenda</a>
+<<<<<<< HEAD
+            <div class="navbar-nav">
+                
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalNav">
+                    <i class="fa fa-plus" aria-hidden="true"></i> cadastrar
+                </button>
+            </div>
+           <!-- Modal -->
+        <div class="modal fade" id="modalNav" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Cadastrar Contato</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                            <div class="container">
+                                    <form method="get" id="formulario">
+                                        <div class="form-column align-items-center">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="form-group">
+                                                        <label  for="name">Name</label>
+                                                        <input type="text" class="form-control mb-10 my-2" id="name" name="name" placeholder="Jane Doe" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="form-group">
+                                                        <label  for="email">Email</label>
+                                                        <div class="input-group mb-2">
+                                                            <div class="input-group-prepend">
+                                                            <div class="input-group-text">@</div>
+                                                            </div>
+                                                            <input type="email" class="form-control" id="email" name="email" placeholder="Username" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-8">
+                                                    <div class="form-group">
+                                                        <label for="rua">Rua</label>
+                                                        <input type="text" class="form-control" id="rua" name="rua">
+                                                    </div>
+                                                </div>
+                                               <div class="col-lg-4">
+                                                    <div class="form-group">
+                                                        <label for="numero">Nº</label>
+                                                        <input type="text" class="form-control" id="numero" name="numero">
+                                                    </div>
+                                               </div>
+                                                
+                                            </div>
+                                           
+                                            <div class="row">
+                                                <div class="col-lg-8">
+                                                    <div class="form-group">
+                                                        <label for="bairro">Bairro</label>
+                                                        <input type="text" class="form-control" id="bairro" name="bairro">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="form-group">
+                                                        <label for="complemento">Complemento</label>
+                                                        <input type="text" class="form-control" id="complemento" name="complemento">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="form-group">
+                                                        <label for="">Observação</label>
+                                                        <textarea class="form-control" aria-label="With textarea" id="observacao" name="observacao" style="resize:none"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="radio">
+                                                            <label id="lb-sexo">Sexo</label>
+                                                            <div class="custom-control custom-radio">
+                                                                <input type="radio" id="feminino" name="sexo" value="feminino" class="custom-control-input">
+                                                                <label class="custom-control-label" for="feminino">feminino</label>
+                                                            </div>
+                                                            <div class="custom-control custom-radio">
+                                                                <input type="radio" id="masculino" name="sexo" value="masculino" class="custom-control-input">
+                                                                <label class="custom-control-label" for="masculino">masculino</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                             </div>
+                                            <div class="row">
+                                                <div class="col-lg-10 pet">
+                                                    
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox"  id="petcheck">
+                                                        <label class="form-check-label" for="petcheck">
+                                                          Marcar como Favorito
+                                                        </label>
+                                                      </div>
+                                                </div>
+                                            </div>
+                            
+                                        </div>
+                                  
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-primary"  id="save">Save</button>
+                                        </div>
+                                    </form>
+                                    
+                            </div>
+                    </div>
+=======
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -64,12 +222,30 @@
                 <div class="navbar-nav">
                     <a class="nav-item nav-link" href="cadastro.html">Cadastrar Contatos <span class="sr-only">(current)</span></a>
                     <a class="nav-item nav-link" href="agenda.html">Ver a Agenda</a>
+>>>>>>> 9d5f7fd51126bea8c655c5e287dec47468a0a870
                 </div>
             </div>
      </nav>
     <div class="container">
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="form-group">
+                    <label for="search">Pesquisa por nome:</label>
+                    <input type="text" class="form-control" id="search" name="search">
+                </div>
+            </div>
+        </div>
+        <div class="row"></div>
         <div class="lista-contatos">
                 <div><h1>Contatos</h1></div>
+<<<<<<< HEAD
+                    <table class="table" id="table">
+                        <thead>
+                            
+                        </thead>
+                        <tbody id="contatos">
+                            
+=======
             <table class="table table-hover">
                    
                     <thead>
@@ -101,6 +277,7 @@
                             </td>
                         <td></td>
                         <td></td>
+>>>>>>> 9d5f7fd51126bea8c655c5e287dec47468a0a870
                             
                         </tr>
                         <tr>
