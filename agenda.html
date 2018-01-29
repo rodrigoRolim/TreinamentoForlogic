@@ -8,7 +8,6 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src=https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js></script>
     <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
-<<<<<<< HEAD
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
@@ -23,10 +22,6 @@
             height: 500px;
             overflow: auto;
         }
-=======
-    <title>Document</title>
-    <style>
->>>>>>> 9d5f7fd51126bea8c655c5e287dec47468a0a870
         .navbar-nav a{
             display: inline;
         }
@@ -41,34 +36,39 @@
             color: gray;
         }
       
-        #ed{
+        [id*="ed-"]{
             border: 1px solid transparent;
-            background-color: blue;
+            background-color: rgba(0, 0, 255, 0.5);
             color: white;
             padding:3px 5px;
             font-size: 12px;
             border-radius: 2px;
+            text-decoration: none;
+           
         }
-        #ex{
+        [id*="ex-"]{
             border: 1px solid transparent;
-            background-color: red;
+            background-color: rgba(255, 0,0,0.5);
             color: white;
             padding:3px 5px;
             font-size: 12px;
             border-radius: 2px;
+            text-decoration: none;
+        }
+        [id*="ex-"]:hover,[id*="ed-"]:hover{
+            color:white;
+
         }
         .fa{
             margin-right: 5px;
         }
-        .table:hover{
-            cursor: pointer;
+        contato:active tr{
+            border-color: red;
         }
-
-        #infor{
-            width:100%;
+        [id*="info-"]{
+            width: 100%;
             display: none;
         }
-<<<<<<< HEAD
         [class*="fa-star"]{
             color: rgb(255, 196, 0);
         }
@@ -89,15 +89,12 @@
         .fa-check-circle-o{
             color:aqua;
         }
-=======
-        
->>>>>>> 9d5f7fd51126bea8c655c5e287dec47468a0a870
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+           
             <a class="navbar-brand" href="#">Agenda</a>
-<<<<<<< HEAD
             <div class="navbar-nav">
                 
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalNav">
@@ -214,17 +211,9 @@
                                     
                             </div>
                     </div>
-=======
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="cadastro.html">Cadastrar Contatos <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="agenda.html">Ver a Agenda</a>
->>>>>>> 9d5f7fd51126bea8c655c5e287dec47468a0a870
                 </div>
             </div>
+        </div>
      </nav>
     <div class="container">
         <div class="row">
@@ -238,76 +227,21 @@
         <div class="row"></div>
         <div class="lista-contatos">
                 <div><h1>Contatos</h1></div>
-<<<<<<< HEAD
                     <table class="table" id="table">
                         <thead>
                             
                         </thead>
                         <tbody id="contatos">
                             
-=======
-            <table class="table table-hover">
-                   
-                    <thead>
-                        
-                    </thead>
-                    <tbody>
-                        <tr id="row">
-                            <th scope="row" style="text-align:left">
-                                <a href=""><i class="fa fa-star-o" aria-hidden="true"></i></a>
-                                <a href=""><i class="fa fa-eye" aria-hidden="true"></i></a>
-                            </th>
-                            <td style="text-align:center">rodrigo rolim veras</td>
-                            <td style="text-align:right">
-                                <a href="#1" class="bt-edex" id="ed"><i class="fa fa-pencil" aria-hidden="true"></i>editar</a>
-                                <a href="#2" class="bt-edex" id="ex"><i class="fa fa-trash-o" aria-hidden="true"></i>excluir</a>
-                            </td>
-                        </tr>
-                        <tr id="infor">
-                             
-                            <td style="text-align:left">
-                                <div>
-                                    <p><span>Nome:</span><span> rodrigo</span></p>
-                                    <p><span>Email:</span><span> rodrigorolimveras92@gmail.com</span></p>
-                                    <p><span>Sexo:</span><span> feminino</span></p>
-                                    <p><span>Rua:</span><span> rua paulo costa pereira</span></p>
-                                    <p><span>Nº</span><span> 469</span></p>
-
-                                </div>
-                            </td>
-                        <td></td>
-                        <td></td>
->>>>>>> 9d5f7fd51126bea8c655c5e287dec47468a0a870
                             
-                        </tr>
-                        <tr>
-                            <th scope="row" style="text-align:left">
-                                <a href=""><i class="fa fa-star-o" aria-hidden="true"></i></a>
-                                <a href=""><i class="fa fa-eye" aria-hidden="true"></i></a>
-                            </th>
-                            <td style="text-align:center">rodrigo rolim veras</td>
-                            <td style="text-align:right">
-                                <a href="#1" class="bt-edex" id="ed"><i class="fa fa-pencil" aria-hidden="true"></i>editar</a>
-                                <a href="#2" class="bt-edex" id="ex"><i class="fa fa-trash-o" aria-hidden="true"></i>excluir</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row" style="text-align:left">
-                                <a href=""><i class="fa fa-star-o" aria-hidden="true"></i></a>
-                                <a href=""><i class="fa fa-eye" aria-hidden="true"></i></a>
-                            </th>
-                            <td style="text-align:center">rodrigo rolim veras</td>
-                            <td style="text-align:right">
-                                <a href="#1" class="bt-edex" id="ed"><i class="fa fa-pencil" aria-hidden="true"></i>editar</a>
-                                <a href="#2" class="bt-edex" id="ex"><i class="fa fa-trash-o" aria-hidden="true"></i>excluir</a>
-                            </td>
-                        </tr>
+                                
+                        </tbody>
                         
-                    </tbody>
-                </table>
+                    </table>
+                      
         </div>
-       
-    </div>
+   </div>
     <script src="script.js"></script>
+    
 </body>
 </html>
