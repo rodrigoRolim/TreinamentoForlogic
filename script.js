@@ -310,12 +310,17 @@ let deleteRow = (cod, r)=>{
                             content: 'Excluído com sucesso!',
                             theme: 'modern',
                             icon: 'fa fa-check-circle-o',
-                            title: 'OK!',
                             backgroundDismiss: 'fechar',
                         })
                     },
                     error: function(){
-                        alert("fudeu");
+                        $.alert({
+                            title: "Falha...",
+                            content: "algo não deu certo",
+                            theme: "modern",
+                            icon: "fa fa-times-circle-o",
+                            backgroundDismiss: 'fechar' 
+                        })
                     } 
                     
                 })
@@ -449,5 +454,6 @@ $(document).ready(function(){
       $("#contatos tr:even").filter(function() {
         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
       });
+     
     });
   });
