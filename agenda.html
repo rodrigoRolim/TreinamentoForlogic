@@ -12,6 +12,8 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
+    
     <title>Document</title>
     <style>
         .table{
@@ -69,10 +71,12 @@
             width: 100%;
             display: none;
         }
-        [class*="fa-star"]{
+        .fa-star{
             color: rgb(255, 196, 0);
         }
-      
+        .fa-star-o{
+            color: gray;
+        }
         [id*="row-"]{
             border-left: 5px solid rgb(7, 224, 159);
             border-right: 5px solid rgb(7, 224, 159);
@@ -89,6 +93,29 @@
         .fa-check-circle-o{
             color:aqua;
         }
+        .table{
+            overflow: scroll;
+        }
+        #inp-search{
+            margin-top: 35px;
+        }
+        #btn-exp{
+            cursor: pointer;
+            border: 1px solid transparent;
+            background-color: rgba(90, 219, 4, 0.733);
+            color: white;
+            padding: 10px 20px;
+            font-weight: bold;
+            float: right;
+            border-radius: 4px;
+            margin-left: 10px;
+        }
+        #btn-exp:active{
+            background-color: green;
+        }
+        .btn{
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -100,7 +127,10 @@
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalNav">
                     <i class="fa fa-plus" aria-hidden="true"></i> cadastrar
                 </button>
+    
+                <button id="btn-exp"><i class="fa fa-download" aria-hidden="true"></i>Exportar contatos</button>
             </div>
+            
            <!-- Modal -->
         <div class="modal fade" id="modalNav" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -214,15 +244,17 @@
                 </div>
             </div>
         </div>
+        
      </nav>
     <div class="container">
         <div class="row">
             <div class="col-lg-9">
-                <div class="form-group">
+                <div class="form-group" id="inp-search">
                     <label for="search">Pesquisa por nome:</label>
                     <input type="text" class="form-control" id="search" name="search">
                 </div>
             </div>
+      
         </div>
         <div class="row"></div>
         <div class="lista-contatos">
@@ -242,6 +274,6 @@
         </div>
    </div>
     <script src="script.js"></script>
-    
+    <script src="pdf.js"></script>
 </body>
 </html>
